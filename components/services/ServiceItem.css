@@ -1,0 +1,35 @@
+.item_wrapper {
+    display: flex;
+    color: var(--primary-4);
+    flex-direction: column;
+    width: 100%;
+    aspect-ratio: 4/4;
+    background-color: var(--primary-2);
+    border-radius: 5px;
+}
+.item_imgWrapper {
+    width: 100%;
+    position: relative;
+    aspect-ratio: 4/3;
+}
+
+.item_img {
+    padding: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.item_img:hover {
+    filter: brightness(70%);
+}
+
+.item_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Центрирует текст по горизонтали */
+    flex: 1 0 auto;
+    margin: 0 auto;
+    font-weight: bolder;
+    font-size: 1rem;
+}

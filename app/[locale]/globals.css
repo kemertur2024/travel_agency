@@ -1,0 +1,95 @@
+:root {
+    --primary-1: rgb(0, 0, 0); /* Основной Цвет */
+    --primary-2: rgb(255, 223, 0);
+    --primary-3: rgb(255, 255, 255);
+    --primary-4: rgb(28, 51, 83);
+    --primary-5: rgba(255, 255, 255, 1);
+    --primary-6: rgb(186, 218, 85);
+
+    --secondary-1: rgb(50, 50, 50); /* Вторичный Цвет A */
+    --secondary-2: rgba(102, 51, 102, 1);
+    --secondary-3: rgba(51, 0, 51, 1);
+    --secondary-4: rgba(204, 153, 255, 1);
+
+    --secondary-b-1: rgba(51, 255, 0, 1); /* Вторичный Цвет B */
+    --secondary-b-2: rgba(102, 102, 51, 1);
+    --secondary-b-3: rgba(0, 51, 0, 1);
+    --secondary-b-4: rgba(153, 255, 153, 1);
+
+    --complement-1: rgba(255, 153, 0, 1); /* Дополнительный Цвет */
+    --complement-2: rgb(153, 102, 51);
+    --complement-3: rgba(102, 51, 0, 1);
+    --complement-4: rgba(255, 204, 153, 1);
+
+    --landing-1: #1a1a1a;
+    --landing-2: #1b4048;
+    --landing-3: #0e5d6e;
+    --landing-4: #acc1c6;
+    --landing-5: #ece2d9;
+    --landing-6: #a16f3e;
+
+    --gradient-0: linear-gradient(
+        0deg,
+        rgba(35, 69, 103, 0.2497373949579832) 0%,
+        rgba(231, 248, 253, 0.4962359943977591) 10%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(231, 248, 253, 0.5018382352941176) 90%,
+        rgba(35, 69, 103, 0.2497373949579832) 100%
+    );
+
+    --gradient-1: linear-gradient(
+        270deg,
+        rgba(153, 153, 255, 1) 0%,
+        rgba(0, 51, 204, 1) 100%
+    );
+
+    --box-shadow: 2px 2px 8px 1px rgba(8, 0, 128, 0.5);
+    --button-shadow: inset 0px 0px 5px 3px rgba(8, 0, 128, 0.5);
+
+    --size-nonaccent: 0.8rem;
+
+    --dist-mini: 5px;
+    --dist-small: 10px;
+    --dist-medium: 20px;
+    --dist-large: 30px;
+
+    --border-radius: 0.5rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    max-width: 100vw;
+    /* overflow-x: hidden; */
+}
+/* body * {
+    border: 0.1px solid red;
+} */
+
+body {
+    display: grid;
+    align-items: start;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content max-content max-content;
+    justify-content: stretch;
+    position: relative;
+}
+
+main {
+    grid-area: 2 / 1 / 3 / 2;
+}
+section {
+    padding: 0 10px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
