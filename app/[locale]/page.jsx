@@ -1,9 +1,14 @@
 import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "../i18n";
 import "./HomePage.css";
-import Services from "@/components/services/Services";
+import Services from "@/components/main/services/Services";
+import Advantages from "@/components/main/advantages/Advantages";
+import Popular from "@/components/main/popular/Popular";
+import RentYaht from "@/components/main/rentyaht/Rentyaht";
+import RentAvto from "@/components/main/rentavto/Rentavto";
+import Individual from "@/components/main/individual/individual";
 
-const i18nNameSpaces = ["HomePage", "Services"];
+const i18nNameSpaces = ["HomePage", "Services", "nav", "header", "advantages"];
 
 export default async function HomePage({ params: { locale } }) {
     const { t, resources } = await initTranslations(locale, i18nNameSpaces);
@@ -15,8 +20,15 @@ export default async function HomePage({ params: { locale } }) {
             namespaces={i18nNameSpaces}
         >
             <main className='main'>
-                <h1>{t("agency")}</h1>
+                <div style={{ visibility: "hidden" }}>
+                    <h1 className='hiddenTitle'>{t("agency")}</h1>
+                </div>
                 <Services />
+                <Advantages />
+                <Popular />
+                <RentYaht />
+                <RentAvto />
+                <Individual />
             </main>
         </TranslationsProvider>
     );

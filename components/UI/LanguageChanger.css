@@ -25,6 +25,15 @@
     position: absolute;
     left: 0;
     top: 39px;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown_ul.open {
+    opacity: 1;
+    transform: scaleY(1);
 }
 
 .change_button,
@@ -40,6 +49,7 @@
     height: 39px;
     border-top: 0.2px solid rgba(219, 198, 198, 0.664);
     cursor: pointer;
+    transition: all 0.5s;
 }
 
 .change_button:hover,

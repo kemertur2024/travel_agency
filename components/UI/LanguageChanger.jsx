@@ -69,24 +69,16 @@ export default function LanguageChanger() {
                 )}
             </div>
 
-            {open && (
-                <ul className='dropdown_ul'>
-                    <li
-                        className='dropdown_li'
-                        onClick={() => handleClick("ru")}
-                    >
-                        <img src='images/other/RU.webp' alt='rus' />
-                        RU
-                    </li>
-                    <li
-                        className='dropdown_li'
-                        onClick={() => handleClick("en")}
-                    >
-                        <img src='images/other/EN.webp' alt='rus' />
-                        EN
-                    </li>
-                </ul>
-            )}
+            <ul className={`dropdown_ul ${open ? "open" : ""}`}>
+                <li className='dropdown_li' onClick={() => handleClick("ru")}>
+                    <img src='images/other/RU.webp' alt='rus' />
+                    RU
+                </li>
+                <li className='dropdown_li' onClick={() => handleClick("en")}>
+                    <img src='images/other/EN.webp' alt='eng' />
+                    EN
+                </li>
+            </ul>
             <input type='text' hidden readOnly value={currentLocale} />
         </div>
     );

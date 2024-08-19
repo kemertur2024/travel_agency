@@ -3,8 +3,15 @@
 import LanguageChanger from "../UI/LanguageChanger";
 import "./Header.css";
 import { useTranslation } from "react-i18next";
+import Nav from "@/components/layout/Nav";
+import MobNav from "@/components/layout/MobNav";
+import Burger from "../UI/Burger";
+import { useState } from "react";
 
 export default function Header() {
+    const [isNavOpen, setIsNavOpen] = useState(false);
+    const toggleNav = () => setIsNavOpen(!isNavOpen);
+
     const { t } = useTranslation();
     return (
         <header className='header'>
@@ -15,7 +22,7 @@ export default function Header() {
                     </div>
                     <div className='label_1'>
                         <div>{t("header:excursions")}</div>
-                        <div>
+                        <div className='label_1_bottom'>
                             <span className='yellow_span'>
                                 {t("header:subtitle")}
                             </span>{" "}
@@ -36,6 +43,7 @@ export default function Header() {
                         </div>
                         <LanguageChanger />
                     </div>
+                    <Burger toggleNav={toggleNav} />
                 </div>
 
                 <img
@@ -44,7 +52,9 @@ export default function Header() {
                     className='toun_img'
                 />
             </div>
-            <nav className='nav'>навигация</nav>
+
+            <Nav />
+            <MobNav isOpen={isNavOpen} />
         </header>
     );
 }

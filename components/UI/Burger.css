@@ -1,0 +1,82 @@
+/* Burger */
+.burger {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 33px;
+    cursor: pointer;
+    padding: 8px;
+    background-color: var(--primary-2);
+    border-radius: 10%;
+    border: 1px solid var(--primary-2);
+    z-index: 4;
+    transition: 0.5s ease-out;
+}
+
+.burger:hover {
+    transform: scale(1.1);
+    background-color: var(--primary-2);
+}
+
+.burger_brick + * {
+    margin-top: 2px;
+}
+
+.burger_brick {
+    width: 15px;
+    height: 2px;
+    background: var(--primary-1);
+    -webkit-transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -ms-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+}
+
+.open .burger_brick:first-child {
+    -webkit-transform: rotate(405deg);
+    -moz-transform: rotate(405deg);
+    -ms-transform: rotate(405deg);
+    -o-transform: rotate(405deg);
+    transform: translateY(4px) rotate(405deg);
+}
+
+.open .burger_brick:last-child {
+    -webkit-transform: rotate(-405deg);
+    -moz-transform: rotate(-405deg);
+    -ms-transform: rotate(-405deg);
+    -o-transform: rotate(-405deg);
+    transform: translateY(-4px) rotate(-405deg);
+}
+
+.open .middle {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+@media (max-width: 989px) {
+    .burger {
+        display: block;
+    }
+}
+
+@media (max-width: 788px) {
+    .burger {
+        top: 5px;
+    }
+}
+@media (max-width: 658px) {
+    .burger {
+        top: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .burger {
+        top: 2px;
+    }
+}

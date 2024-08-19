@@ -1,13 +1,14 @@
 import { ServicesList } from "@/lib/ServicesList";
 import "./Services.css";
 import ServiceItem from "./ServiceItem";
+import Title from "../../layout/Title";
 
 export default function Services() {
     const list = ServicesList;
 
     return (
         <>
-            Services
+            <Title text='services' />
             <section>
                 <div className='wrapper'>
                     {list.map((item) => (
