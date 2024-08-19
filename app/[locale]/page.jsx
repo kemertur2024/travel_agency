@@ -6,7 +6,7 @@ import Advantages from "@/components/main/advantages/Advantages";
 import Popular from "@/components/main/popular/Popular";
 import RentYaht from "@/components/main/rentyaht/Rentyaht";
 import RentAvto from "@/components/main/rentavto/Rentavto";
-import Individual from "@/components/main/individual/individual";
+import Individual from "@/components/main/individual/Individual";
 
 const i18nNameSpaces = ["HomePage", "Services", "nav", "header", "advantages"];
 
