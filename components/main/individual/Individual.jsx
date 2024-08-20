@@ -1,10 +1,11 @@
 import Title from "../../layout/Title";
 import "./Individual.css";
 import Carousel from "@/components/UI/Carousel";
-import { exscursions } from "@/lib/Excursions";
+import { filterByTags } from "@/helpers/helpers";
 
 export default function Individual() {
-    const data = exscursions.filter((item) => item.individual == true);
+    const tags = ["individual"];
+    const data = filterByTags(tags);
 
     return (
         <>

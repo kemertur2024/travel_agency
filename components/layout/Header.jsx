@@ -7,19 +7,21 @@ import Nav from "@/components/layout/Nav";
 import MobNav from "@/components/layout/MobNav";
 import Burger from "../UI/Burger";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Header() {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const toggleNav = () => setIsNavOpen(!isNavOpen);
+    const closeNav = () => setIsNavOpen(false);
 
     const { t } = useTranslation();
     return (
         <header className='header'>
             <div className='main_row'>
                 <div className='main_top_row'>
-                    <div className='img_wrap'>
-                        <img src='images/logo/Logo.webp' alt='Rom travel' />
-                    </div>
+                    <Link href='/' className='img_wrap'>
+                        <img src='/images/logo/Logo.webp' alt='Rom travel' />
+                    </Link>
                     <div className='label_1'>
                         <div>{t("header:excursions")}</div>
                         <div className='label_1_bottom'>
@@ -43,18 +45,18 @@ export default function Header() {
                         </div>
                         <LanguageChanger />
                     </div>
-                    <Burger toggleNav={toggleNav} />
+                    <Burger toggleNav={toggleNav} isNavOpen={isNavOpen} />
                 </div>
 
                 <img
-                    src='images/other/toun.webp'
+                    src='/images/other/toun.webp'
                     alt='Rom travel'
                     className='toun_img'
                 />
             </div>
 
             <Nav />
-            <MobNav isOpen={isNavOpen} />
+            <MobNav isOpen={isNavOpen} closeMenu={closeNav} />
         </header>
     );
 }

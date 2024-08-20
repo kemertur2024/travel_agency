@@ -1,10 +1,11 @@
 import Title from "../../layout/Title";
 import "./Popular.css";
 import Carousel from "@/components/UI/Carousel";
-import { exscursions } from "@/lib/Excursions";
+import { filterByTags } from "@/helpers/helpers";
 
 export default function Popular() {
-    const data = exscursions.filter((item) => item.popular == true);
+    const tags = ["popular"];
+    const data = filterByTags(tags);
 
     return (
         <>

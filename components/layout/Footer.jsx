@@ -12,109 +12,185 @@ export default function Footer() {
                 <div className={cl.left}>
                     <nav className={cl.nav}>
                         <ul>
-                            <span className={cl.yellow_title}>ВАШ РЕГИОН</span>
+                            <span className={cl.yellow_title}>
+                                {t("howtoorder:title_region")}
+                            </span>
                             <li>
-                                <Link href='/'>{t("kemer")}</Link>
+                                <Link href='/catalog/category/from_kemer'>
+                                    {t("nav:from_kemer")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("antalia")}</Link>
+                                <Link href='/catalog/category/from_antalia'>
+                                    {t("nav:from_antalia")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("alania")}</Link>
+                                <Link href='/catalog/category/from_alania'>
+                                    {t("nav:from_alania")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("belek")}</Link>
+                                <Link href='/catalog/category/from_belek'>
+                                    {t("nav:from_belek")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("marmaris")}</Link>
+                                <Link href='/catalog/category/from_marmaris'>
+                                    {t("nav:from_marmaris")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("side")}</Link>
+                                <Link href='/catalog/category/from_side'>
+                                    {t("nav:from_side")}
+                                </Link>
                             </li>
                         </ul>
                         <ul>
                             <span className={cl.yellow_title}>
-                                {" "}
-                                НАШИ УСЛУГИ
+                                {t("howtoorder:title_services")}
                             </span>
                             <li>
-                                <Link href='/'>{t("nav:rent_yaht")}</Link>
+                                <Link href='/catalog/category/rent_yaht'>
+                                    {t("nav:rent_yaht")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:rent_avto")}</Link>
+                                <Link href='/catalog/category/rent_avto'>
+                                    {t("nav:rent_avto")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:transfers")}</Link>
+                                <Link href='/catalog/category/transfers'>
+                                    {t("nav:transfers")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:vip")}</Link>
+                                <Link href='/catalog/category/vip'>
+                                    {t("nav:vip")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:shopping")}</Link>
+                                <Link href='/catalog/category/shopping'>
+                                    {t("nav:shopping")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:rent_valla")}</Link>
+                                <Link href='/catalog/category/rent_villa'>
+                                    {t("nav:rent_villa")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:medicine")}</Link>
+                                <Link href='/catalog/category/medicine'>
+                                    {t("nav:medicine")}
+                                </Link>
                             </li>
                         </ul>
                         <ul>
-                            <span className={cl.yellow_title}> ПОДДЕРЖКА</span>
+                            <span className={cl.yellow_title}>
+                                {t("howtoorder:title_support")}
+                            </span>
 
                             <li>
-                                <Link href='/'>{t("nav:rewiews")}</Link>
+                                <Link href='/catalog/category/reviews'>
+                                    {t("nav:reviews")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:contacts")}</Link>
+                                <Link href='/catalog/category/contacts'>
+                                    {t("nav:contacts")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:faq")}</Link>
+                                <Link href='/catalog/category/faq'>
+                                    {t("nav:faq")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:blog")}</Link>
+                                <Link href='/catalog/category/blog'>
+                                    {t("nav:blog")}
+                                </Link>
                             </li>
                         </ul>
                     </nav>
                     <div>
                         <span className={cl.yellow_title}>
-                            {" "}
-                            КАК ЗАКАЗАТЬ ЭКСКУРСИЮ?
+                            {t("howtoorder:howtoorder")}
                         </span>
-                        ​​ 1. Заполните форму заявки. (бронь без ПРЕДОПЛАТЫ!) В
-                        течение часа с вами свяжется наш оператор. 2.
-                        Внимание!!! В указанную дату и время, ожидайте трансфер
-                        возле входа в отель, а не на ресепшене отеля. 3. Оплата
-                        производится в день экскурсии исполнителю. 4. Оплатить
-                        можно на Сбербанк на Каспи в USDT.
+                        <ol className={cl.ol}>
+                            <li>{t("howtoorder:paragraf1")}</li>
+                            <li>{t("howtoorder:paragraf2")}</li>
+                            <li>{t("howtoorder:paragraf3")}</li>
+                            <li>{t("howtoorder:paragraf4")}</li>
+                        </ol>
                     </div>
                 </div>
                 <div className={cl.form_wrapper}>
-                    <span className={cl.yellow_title}>ФОРМА ЗАЯВКИ</span>
+                    <span className={cl.yellow_title}>
+                        {t("howtoorder:title_form")}
+                    </span>
 
                     <form className={cl.form}>
                         <div className={cl.input_wrapper}>
-                            <input placeholder='телефон с кодом страны' />
-                            <input placeholder='имя' />
-                            <input type='date' placeholder='дата тура' />
-                            <input placeholder='Эл.почта' />
-                            <input placeholder='Название отеля/номер комнаты' />
-                            <input placeholder='Экскурсия' />
-                            <input placeholder='Кол-во взрослых' />
-                            <input placeholder='Дети 0-6 лет' />
-                            <input placeholder='Дети 7-11 лет' />
+                            <input placeholder={t("howtoorder:form_phone")} />
+                            <input placeholder={t("howtoorder:form_name")} />
+                            <input
+                                type='date'
+                                placeholder={t("howtoorder:form_date")}
+                            />
+                            <input placeholder={t("howtoorder:form_mail")} />
+                            <input placeholder={t("howtoorder:form_hotel")} />
+                            <input
+                                placeholder={t("howtoorder:form_excursions")}
+                            />
+                            <input placeholder={t("howtoorder:form_adult")} />
+                            <input
+                                placeholder={t("howtoorder:form_kids_0_6")}
+                            />
+                            <input
+                                placeholder={t("howtoorder:form_kids_7_11")}
+                            />
                         </div>
                         <div className={cl.textarea_wrapper}>
-                            <textarea name='' id='' rows='20'></textarea>
-                            <button>заказать</button>
+                            <textarea
+                                name=''
+                                id=''
+                                rows='20'
+                                placeholder={t("howtoorder:form_message")}
+                            ></textarea>
+                            <button>{t("howtoorder:form_button")}</button>
                         </div>
                     </form>
 
                     <div className={cl.form_bottom}>
-                        ЭКСКУРСИИ: +90541 761 84 40 Сотрудничество с нами:
-                        +90541 761 84 40 UÇAK BİLETİ NO: +90 242 814 22 39 НАШ
-                        АДРЕС: BELDİBİ MAH. BAŞKOMUTAN ATATÜRK CAD. NO:184 C/1
-                        KEMER / ANTALYA
+                        <div>
+                            <span className={cl.yellow_title}>
+                                {t("howtoorder:contact_excutsion")}
+                            </span>
+                            <span> +90541 761 84 40</span>
+                        </div>
+                        <div>
+                            <span className={cl.yellow_title}>
+                                {t("howtoorder:contact_partners")}
+                            </span>
+                            <span> +90541 761 84 40</span>
+                        </div>
+                        <div>
+                            <span className={cl.yellow_title}>
+                                UÇAK BİLETİ NO:
+                            </span>
+                            <span> +90 242 814 22 39</span>
+                        </div>
+                        <div>
+                            <span className={cl.yellow_title}>
+                                {t("howtoorder:contact_address")}
+                            </span>
+                            <span>
+                                {" "}
+                                BELDİBİ MAH. BAŞKOMUTAN ATATÜRK CAD. NO:184 C/1
+                                KEMER / ANTALYA
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>

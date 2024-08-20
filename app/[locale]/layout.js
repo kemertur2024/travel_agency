@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
 
-const i18nNameSpaces = ["HomePage", "Services", "header", "nav"];
+const i18nNameSpaces = ["HomePage", "Services", "header", "nav", "howtoorder"];
 
 const open_sans = Open_Sans({ subsets: ["latin"] });
 

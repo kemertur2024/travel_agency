@@ -10,7 +10,7 @@ export default function Services() {
         <>
             <Title text='services' />
             <section>
-                <div className='wrapper'>
+                <div className='services_wrapper'>
                     {list.map((item) => (
                         <ServiceItem item={item} key={item.id} />
                     ))}

@@ -8,7 +8,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import LanguageChanger from "../UI/LanguageChanger";
 import { useState } from "react";
 
-export default function Nav({ isOpen }) {
+export default function Nav({ isOpen, closeMenu }) {
     const { t } = useTranslation();
     const [openSubmenu, setOpenSubmenu] = useState(null);
 
@@ -23,10 +23,17 @@ export default function Nav({ isOpen }) {
                 <LanguageChanger />
                 <ul>
                     <li>
-                        <Link href='/'>{t("nav:main")}</Link>
+                        <Link onClick={closeMenu} href='/'>
+                            {t("nav:main")}{" "}
+                        </Link>
                     </li>
                     <li>
-                        <Link href='/'>{t("nav:about")}</Link>
+                        <Link
+                            onClick={closeMenu}
+                            href='/catalog/category/about'
+                        >
+                            {t("nav:about")}
+                        </Link>
                     </li>
                     <li>
                         <div onClick={() => toggleSubmenu(1)} className='micon'>
@@ -39,60 +46,141 @@ export default function Nav({ isOpen }) {
                             }}
                         >
                             <li>
-                                <Link href='/'>{t("nav:from_antalia")}</Link>
+                                <Link
+                                    onClick={closeMenu}
+                                    href='/catalog/category/from_antalia'
+                                >
+                                    {t("nav:from_antalia")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:from_alania")}</Link>
+                                <Link
+                                    onClick={closeMenu}
+                                    href='/catalog/category/from_alania'
+                                >
+                                    {t("nav:from_alania")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:from_belek")}</Link>
+                                <Link
+                                    onClick={closeMenu}
+                                    href='/catalog/category/from_belek'
+                                >
+                                    {t("nav:from_belek")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:from_kemer")}</Link>
+                                <Link
+                                    onClick={closeMenu}
+                                    href='/catalog/category/from_kemer'
+                                >
+                                    {t("nav:from_kemer")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:from_marmaris")}</Link>
+                                <Link
+                                    onClick={closeMenu}
+                                    href='/catalog/category/from_kemer'
+                                >
+                                    {t("nav:from_marmaris")}
+                                </Link>
                             </li>
                             <li>
-                                <Link href='/'>{t("nav:from_side")}</Link>
+                                <Link
+                                    onClick={closeMenu}
+                                    href='/catalog/category/from_side'
+                                >
+                                    {t("nav:from_side")}
+                                </Link>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <Link href='/'>{t("nav:rent_yaht")}</Link>
+                        <Link
+                            onClick={closeMenu}
+                            href='/catalog/category/rent_yaht'
+                        >
+                            {t("nav:rent_yaht")}
+                        </Link>
                     </li>
                     <li>
-                        <Link href='/'>{t("nav:rent_avto")}</Link>
+                        <Link
+                            onClick={closeMenu}
+                            href='/catalog/category/rent_avto'
+                        >
+                            {t("nav:rent_avto")}
+                        </Link>
                     </li>
                     <li>
-                        <Link href='/'>{t("nav:transfers")}</Link>
+                        <Link
+                            onClick={closeMenu}
+                            href='/catalog/category/transfers'
+                        >
+                            {t("nav:transfers")}
+                        </Link>
                     </li>
                     <li>
-                        <Link href='/'>{t("nav:vip")}</Link>
+                        <Link onClick={closeMenu} href='/catalog/category/vip'>
+                            {t("nav:vip")}
+                        </Link>
                     </li>
                     <li>
-                        <Link href='/'>{t("nav:shopping")}</Link>
+                        <Link
+                            onClick={closeMenu}
+                            href='/catalog/category/shopping'
+                        >
+                            {t("nav:shopping")}
+                        </Link>
                     </li>
                     <li>
-                        <Link href='/'>{t("nav:rent_valla")}</Link>
+                        <Link
+                            onClick={closeMenu}
+                            href='/catalog/category/rent_villa'
+                        >
+                            {t("nav:rent_villa")}
+                        </Link>
                     </li>
                     <li>
-                        <Link href='/'>{t("nav:medicine")}</Link>
+                        <Link
+                            onClick={closeMenu}
+                            href='/catalog/category/medicine'
+                        >
+                            {t("nav:medicine")}
+                        </Link>
                     </li>
                     <li>
-                        <Link href='/'>{t("nav:rewiews")}</Link>
+                        <Link
+                            onClick={closeMenu}
+                            href='/catalog/category/reviews'
+                        >
+                            {t("nav:reviews")}
+                        </Link>
                     </li>
                     <li>
-                        <Link href='/'>{t("nav:contacts")}</Link>
+                        <Link
+                            onClick={closeMenu}
+                            href='/catalog/category/contacts'
+                        >
+                            {t("nav:contacts")}
+                        </Link>
                     </li>
                     <li>
-                        <Link href='/'>{t("nav:faq")}</Link>
+                        <Link onClick={closeMenu} href='/catalog/category/faq'>
+                            {t("nav:faq")}
+                        </Link>
                     </li>
                     <li>
-                        <Link href='/'>{t("nav:politic")}</Link>
+                        <Link
+                            onClick={closeMenu}
+                            href='/catalog/category/politic'
+                        >
+                            {t("nav:politic")}
+                        </Link>
                     </li>
                     <li>
-                        <Link href='/'>{t("nav:blog")}</Link>
+                        <Link onClick={closeMenu} href='/catalog/category/blog'>
+                            {t("nav:blog")}
+                        </Link>
                     </li>
                 </ul>
                 <div className='mlabel_2'>

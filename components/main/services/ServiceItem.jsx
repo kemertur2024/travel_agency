@@ -3,12 +3,13 @@
 import { useTranslation } from "react-i18next";
 import "./ServiceItem.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ServiceItem({ item }) {
     const { t } = useTranslation();
 
     return (
-        <>
+        <Link href={item.link}>
             <figure className='item_wrapper'>
                 <div className='item_imgWrapper'>
                     <Image
@@ -25,6 +26,6 @@ export default function ServiceItem({ item }) {
                     {t(`Services:${item.nameKey}`)}
                 </figcaption>
             </figure>
-        </>
+        </Link>
     );
 }

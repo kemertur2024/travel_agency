@@ -54,7 +54,7 @@ export default function LanguageChanger() {
         <div className='select_wrapper'>
             <div className='change_button' onClick={toggleDropdown}>
                 <img
-                    src={`images/other/${selectedLocale.toUpperCase()}.webp`}
+                    src={`/images/other/${selectedLocale.toUpperCase()}.webp`}
                     alt={selectedLocale}
                 />
                 {selectedLocale.toUpperCase()}
@@ -71,11 +71,11 @@ export default function LanguageChanger() {
 
             <ul className={`dropdown_ul ${open ? "open" : ""}`}>
                 <li className='dropdown_li' onClick={() => handleClick("ru")}>
-                    <img src='images/other/RU.webp' alt='rus' />
+                    <img src='/images/other/RU.webp' alt='rus' />
                     RU
                 </li>
                 <li className='dropdown_li' onClick={() => handleClick("en")}>
-                    <img src='images/other/EN.webp' alt='eng' />
+                    <img src='/images/other/EN.webp' alt='eng' />
                     EN
                 </li>
             </ul>

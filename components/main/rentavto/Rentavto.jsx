@@ -1,10 +1,12 @@
 import Title from "../../layout/Title";
 import "./Rentavto.css";
 import Carousel from "@/components/UI/Carousel";
-import { exscursions } from "@/lib/Excursions";
+import { filterByTags } from "@/helpers/helpers";
 
 export default function RentAvto() {
-    const data = exscursions.filter((item) => item.category == "avto");
+    const tags = ["rent_avto"];
+    const data = filterByTags(tags);
+
     return (
         <>
             <Title text='rent_avto' />

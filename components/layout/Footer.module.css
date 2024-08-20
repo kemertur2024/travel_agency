@@ -120,6 +120,8 @@
 }
 
 .form_bottom {
+    display: flex;
+    flex-direction: column;
     margin-top: 3rem;
 }
 
@@ -128,6 +130,10 @@
     margin: 15px 0;
     padding: 0.5rem;
     border-bottom: 2px solid var(--primary-2);
+}
+
+.ol {
+    list-style-position: inside;
 }
 
 @media (max-width: 989px) {
