@@ -8,7 +8,15 @@ import RentYaht from "@/components/main/rentyaht/Rentyaht";
 import RentAvto from "@/components/main/rentavto/Rentavto";
 import Individual from "@/components/main/individual/Individual";
 
-const i18nNameSpaces = ["HomePage", "Services", "nav", "header", "advantages"];
+const i18nNameSpaces = [
+    "HomePage",
+    "Services",
+    "nav",
+    "header",
+    "advantages",
+    "excursiions",
+    "excursionName",
+];
 
 export default async function HomePage({ params: { locale } }) {
     const { t, resources } = await initTranslations(locale, i18nNameSpaces);

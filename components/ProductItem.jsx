@@ -13,17 +13,19 @@ export default function ProductItem({ child }) {
                 rel='noopener noreferrer'
                 // target='_blank'
             >
-                <Image
-                    src={
-                        child?.images[0]
-                            ? child?.images[0]
-                            : "/images/default_product.png"
-                    }
-                    alt={child.name}
-                    width={854}
-                    height={480}
-                    priority
-                />
+                <div className={cl.img_wrapper}>
+                    <Image
+                        src={
+                            child?.images[0]
+                                ? child?.images[0]
+                                : "/images/default_product.png"
+                        }
+                        alt={child.name}
+                        width={854}
+                        height={480}
+                        priority
+                    />
+                </div>
                 <div className={cl.bottom}>
                     <h3 className={cl.bottom_title}>{child.name}</h3>
                     <div className={cl.bottom_price}>

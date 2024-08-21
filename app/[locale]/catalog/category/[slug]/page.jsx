@@ -6,7 +6,15 @@ import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "@/app/i18n";
 import Title from "@/components/layout/Title";
 
-const i18nNameSpaces = ["HomePage", "Services", "nav", "header", "advantages"];
+const i18nNameSpaces = [
+    "HomePage",
+    "Services",
+    "nav",
+    "header",
+    "advantages",
+    "excursions",
+    "excursionName",
+];
 
 export default async function ExcursionPage({ params }) {
     const locale = params.locale;

@@ -5,7 +5,15 @@ import Footer from "@/components/layout/Footer";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
 
-const i18nNameSpaces = ["HomePage", "Services", "header", "nav", "howtoorder"];
+const i18nNameSpaces = [
+    "HomePage",
+    "Services",
+    "header",
+    "nav",
+    "howtoorder",
+    "excursions",
+    "exscursionName"
+];
 
 const open_sans = Open_Sans({ subsets: ["latin"] });
 

@@ -3,8 +3,8 @@
 import { useTranslation } from "react-i18next";
 import "./Title.css";
 
-export default function Title({ text }) {
-    const { t, i18n } = useTranslation("nav");
+export default function TitleExcursion({ text }) {
+    const { t, i18n } = useTranslation("excursionName");
 
     return (
         <div className='title_wrap'>

@@ -1,0 +1,71 @@
+.container {
+    padding: 0.5rem 0.5rem;
+    list-style-position: inside;
+}
+.description {
+    padding: 0.5rem;
+    border: 1px solid var(--primary-2);
+    border-radius: 0.5rem;
+}
+.description p {
+    text-indent: 0.5rem;
+    line-height: 1.2;
+}
+.description em {
+    color: var(--secondary-2);
+}
+
+.description h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.2;
+}
+.description h2 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+.description p strong {
+    line-height: 1.2;
+}
+
+.description .red {
+    font-size: 50px;
+}
+
+.price_wrapper {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.price {
+    color: var(--secondary-2);
+}
+.oldprice {
+    color: var(--secondary-1);
+    text-decoration: line-through;
+}
+
+.tooLike {
+    display: flex;
+    font-size: 1.2rem;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-1);
+    margin-bottom: 1rem;
+    -webkit-box-shadow: 0px 17px 13px -12px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 17px 13px -12px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 17px 13px -12px rgba(34, 60, 80, 0.2);
+}
+
+.tooLike > * {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}

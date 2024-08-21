@@ -10,7 +10,7 @@
     transition: all 0.3s;
 }
 
-.item > img {
+.img_wrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -18,8 +18,20 @@
     height: 60%; /* Высота изображения относительно карточки */
     object-fit: cover;
     border-radius: 0.5rem 0.5rem 0 0; /* Скругляем только верхние углы */
+    transition: all 0.5s;
+    overflow: hidden;
+}
+.img_wrapper img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.5s;
 }
 
+.img_wrapper img:hover {
+    transform: scale(1.2);
+}
 .bottom {
     position: absolute;
     bottom: 0;
