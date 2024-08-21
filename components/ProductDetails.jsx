@@ -35,10 +35,11 @@ export default function ProductDetails({ item }) {
                     </div>
                     <div className={cl.description}>
                         <Markdown
-                            children={t(`excursions:${item.descriptionKey}`)}
-                            remarkPlugins={[remarkGfm]} // Enables GitHub Flavored Markdown
-                            rehypePlugins={[rehypeRaw]} // Allows rendering raw HTML in Markdown
-                        />
+                            remarkPlugins={[remarkGfm]}
+                            rehypePlugins={[rehypeRaw]}
+                        >
+                            {t(`excursions:${item.descriptionKey}`)}
+                        </Markdown>
                     </div>
                     <div className={cl.tooLike}>
                         Вам также может понравиться
