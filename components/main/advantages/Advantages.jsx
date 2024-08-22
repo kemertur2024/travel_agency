@@ -7,7 +7,6 @@ export default function Advantages() {
     return (
         <>
             <Title text='advantages' />
-
             <section>
                 <div className='container'>
                     {advantages.map((item) => (

@@ -1,0 +1,58 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 70vh;
+    overflow: auto;
+}
+
+.form_title {
+    text-align: center;
+    padding: 1rem;
+}
+
+.input_wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.textarea_wrapper {
+    width: 100%;
+}
+
+.input_wrapper input,
+.textarea_wrapper textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary-2);
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+}
+
+.textarea_wrapper textarea::placeholder {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    color: #888;
+}
+/* Стиль для плейсхолдера инпута даты */
+.input_wrapper input[type="date"]::placeholder {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    color: #888;
+}
+
+.button_wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

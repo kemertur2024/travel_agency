@@ -12,7 +12,8 @@ const i18nNameSpaces = [
     "nav",
     "howtoorder",
     "excursions",
-    "exscursionName"
+    "exscursionName",
+    "transfers",
 ];
 
 const open_sans = Open_Sans({ subsets: ["latin"] });

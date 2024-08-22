@@ -28,10 +28,7 @@ export default function Nav({ isOpen, closeMenu }) {
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            onClick={closeMenu}
-                            href='/catalog/category/about'
-                        >
+                        <Link onClick={closeMenu} href='/about'>
                             {t("nav:about")}
                         </Link>
                     </li>
@@ -112,10 +109,7 @@ export default function Nav({ isOpen, closeMenu }) {
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            onClick={closeMenu}
-                            href='/catalog/category/transfers'
-                        >
+                        <Link onClick={closeMenu} href='/transfers'>
                             {t("nav:transfers")}
                         </Link>
                     </li>

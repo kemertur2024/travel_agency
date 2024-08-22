@@ -5,14 +5,15 @@
     grid-area: 3 / 1 / 4 / 2;
     color: var(--primary-3);
     display: flex;
+    flex-direction: column;
     padding: 0.5rem;
     margin: 15px 0;
     border-top: 2px solid var(--primary-2);
 }
-.left {
+.navigation {
     display: flex;
     flex-wrap: wrap;
-    width: 60%;
+    width: 100%;
     padding: 0.5rem;
     gap: 0.5rem;
 }
@@ -31,8 +32,8 @@
     line-height: 2;
 }
 
-.form_wrapper {
-    width: 40%;
+.footer_info {
+    width: 100%;
     margin: 0 auto;
     padding: 0.5rem;
     background-color: var(--primary-1);
@@ -44,85 +45,11 @@
     gap: 0.5rem;
 }
 
-.form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 0.5rem;
-}
-
 .input_wrapper {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
-}
-
-.input_wrapper input {
-    width: 100%;
-    padding: 0.3rem;
-    height: 1.5rem; /* Высота каждого input */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-.input_wrapper input::placeholder {
-    font-size: 0.7rem;
-    vertical-align: middle;
-    line-height: 1.5;
-    color: var(--secondary-1);
-}
-
-.input_wrapper input:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-.textarea_wrapper {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: calc(1.5rem * 9 + 0.3rem * 8); /* Высота всех input минус один */
-}
-
-.textarea_wrapper textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    resize: none;
-    transition: border-color 0.3s ease;
-    height: calc(100% - 1.8rem); /* Учет высоты кнопки (2rem) и gap (0.3rem) */
-}
-
-.textarea_wrapper textarea:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-.textarea_wrapper button {
-    padding: 0.2rem;
-    background-color: var(--primary-2);
-    color: var(--primary-1);
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    height: 1.5rem; /* Высота кнопки равна высоте одного input */
-}
-
-.textarea_wrapper button:hover {
-    background-color: #0056b3;
-}
-
-.form_bottom {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
 }
 
 .socials_wrapper {
@@ -134,6 +61,12 @@
 
 .ol {
     list-style-position: inside;
+}
+
+.howtoorder {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 @media (max-width: 989px) {
@@ -171,3 +104,4 @@
 .yellow_title {
     color: var(--primary-2);
 }
+

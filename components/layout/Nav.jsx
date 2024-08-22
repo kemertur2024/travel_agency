@@ -16,9 +16,7 @@ export default function Nav() {
                         <Link href='/'>{t("nav:main")}</Link>
                     </li>
                     <li>
-                        <Link href='/catalog/category/about'>
-                            {t("nav:about")}
-                        </Link>
+                        <Link href='/about'>{t("nav:about")}</Link>
                     </li>
                     <li>
                         <Link href='/catalog/category/from_kemer'>
@@ -73,7 +71,7 @@ export default function Nav() {
                         </Link>
                     </li>
                     <li>
-                        <Link href='/catalog/category/transfers'>
+                        <Link href='/transfers'>
                             {t("nav:transfers")}
                         </Link>
                     </li>
