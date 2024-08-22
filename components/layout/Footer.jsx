@@ -25,9 +25,8 @@ export default function Footer() {
                             <li>{t("howtoorder:paragraf2")}</li>
                             <li>{t("howtoorder:paragraf3")}</li>
                             <li>{t("howtoorder:paragraf4")}</li>
-                        </ol>
+                        </ol>{" "}
                         <MyButton onClick={toggleOpen}>
-                            {" "}
                             {t("howtoorder:howtoorder_btn")}
                         </MyButton>
                     </div>
