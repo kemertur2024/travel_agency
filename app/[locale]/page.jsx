@@ -16,6 +16,7 @@ const i18nNameSpaces = [
     "advantages",
     "excursiions",
     "excursionName",
+    "label",
 ];
 
 export default async function HomePage({ params: { locale } }) {
@@ -29,7 +30,7 @@ export default async function HomePage({ params: { locale } }) {
         >
             <main className='main'>
                 <div style={{ visibility: "hidden" }}>
-                    <h1 className='hiddenTitle'>{t("agency")}</h1>
+                    <h1 className='hiddenTitle'>{`Туристическое агенство ${process.env.FIRM_NAME}`}</h1>
                 </div>
                 <Services />
                 <Advantages />

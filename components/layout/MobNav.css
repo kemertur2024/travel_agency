@@ -2,6 +2,13 @@
     display: none;
 }
 
+.mobnav_toprow {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding-top: 1.5rem;
+}
+
 .micon {
     margin-right: 0.3rem;
     display: flex;
@@ -54,8 +61,8 @@
         overflow-y: auto; /* Полоса прокрутки */
         transition: right 0.4s ease-in-out;
         padding-top: 28px;
+        padding-bottom: 3rem;
         font-size: 1rem;
-        margin-bottom: 3rem;
     }
 
     .mnavigation.open {

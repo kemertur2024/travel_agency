@@ -1,18 +1,14 @@
 "use client";
 
-import { useState } from "react";
-import "./Burger.css";
+import cl from "./Burger.module.css";
 
 export default function Burger({ toggleNav, isNavOpen }) {
     return (
         <div
-            id='burger'
-            className={`burger ${isNavOpen ? "open" : ""}`}
+            className={`${cl.menu} ${cl.burger2} ${isNavOpen ? cl.open : ""}`}
             onClick={toggleNav}
         >
-            <div className='burger_brick'></div>
-            <div className='burger_brick middle'></div>
-            <div className='burger_brick'></div>
+            <div className={cl.icon}></div>
         </div>
     );
 }

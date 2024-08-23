@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import LanguageChanger from "../UI/LanguageChanger";
 import { useState } from "react";
+import MyButton from "../UI/myButton";
 
 export default function Nav({ isOpen, closeMenu }) {
     const { t } = useTranslation();
@@ -20,7 +21,17 @@ export default function Nav({ isOpen, closeMenu }) {
         <>
             <div className={`nav-overlay ${isOpen ? "open" : ""}`}></div>
             <nav className={`mnavigation ${isOpen ? "open" : ""}`}>
-                <LanguageChanger />
+                <div className='mobnav_toprow'>
+                    <MyButton
+                        onClick={(e) => {
+                            e.preventDefault();
+                            router.push(`${process.env.WHATSAPP_LINK}`);
+                        }}
+                    >
+                        Заказать
+                    </MyButton>
+                    <LanguageChanger />
+                </div>
                 <ul>
                     <li>
                         <Link onClick={closeMenu} href='/'>
@@ -177,13 +188,6 @@ export default function Nav({ isOpen, closeMenu }) {
                         </Link>
                     </li>
                 </ul>
-                <div className='mlabel_2'>
-                    <div className='green_span'>{t("header:order")}</div>
-                    <div className='underline_span'>+90 000-000-00-00</div>
-                    <div className='underline_span'>
-                        {t("header:excursionsKemer")}
-                    </div>
-                </div>
             </nav>
         </>
     );

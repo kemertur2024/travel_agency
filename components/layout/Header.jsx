@@ -8,6 +8,7 @@ import MobNav from "@/components/layout/MobNav";
 import Burger from "../UI/Burger";
 import { useState } from "react";
 import Link from "next/link";
+import MyButton from "../UI/myButton";
 
 export default function Header() {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -28,31 +29,23 @@ export default function Header() {
                             <span className='yellow_span'>
                                 {t("header:subtitle")}
                             </span>{" "}
-                            <span className='name_span'>Rom Travel</span>
                         </div>
                     </div>
                     <div className='right'>
                         <div className='label_2'>
-                            <div className='green_span'>
-                                {t("header:order")}
-                            </div>
-                            <div className='underline_span'>
-                                +90 000-000-00-00
-                            </div>
-                            <div className='underline_span'>
-                                {t("header:excursionsKemer")}
-                            </div>
+                            <MyButton
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    router.push(`${process.env.WHATSAPP_LINK}`);
+                                }}
+                            >
+                                Заказать
+                            </MyButton>
                         </div>
                         <LanguageChanger />
                     </div>
                     <Burger toggleNav={toggleNav} isNavOpen={isNavOpen} />
                 </div>
-
-                <img
-                    src='/images/other/toun.webp'
-                    alt='Rom travel'
-                    className='toun_img'
-                />
             </div>
 
             <Nav />

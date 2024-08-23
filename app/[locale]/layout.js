@@ -19,9 +19,8 @@ const i18nNameSpaces = [
 const open_sans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata = {
-    title: 'Туристическое агенство "Rom travel"',
-    description:
-        "Экскурсии в Кемере от 'Rom travel' ( Ром тревел ) Анталия актуальные цены 2024, описание, отзывы, аренда яхты и авто трансферы Кемер - Анталия. Закажите экскурсию онлайн на нашем сайте без предоплаты.",
+    title: `Туристическое агенство "${process.env.FIRM_NAME}"`,
+    description: `Экскурсии в Кемере от '${process.env.FIRM_NAME}' ( Ром тревел ) Анталия актуальные цены 2024, описание, отзывы, аренда яхты и авто трансферы Кемер - Анталия. Закажите экскурсию онлайн на нашем сайте без предоплаты.`,
 };
 
 export default async function RootLayout({ children, params }) {
@@ -37,7 +36,7 @@ export default async function RootLayout({ children, params }) {
             <html lang={locale} className={open_sans.className}>
                 <body>
                     <Header />
-                    {children}
+                    <main>{children}</main>
                     <Footer />
                 </body>
             </html>

@@ -1,14 +1,23 @@
 .select_wrapper {
     align-self: center;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     position: relative;
     min-width: 80px;
-    height: 39px;
-    color: var(--primary-5);
-    background-color: var(--secondary-1);
+    height: 30px;
+    color: var(--primary-1);
+    background-color: var(--primary-2);
     font-size: 0.8rem;
+}
+
+.change_button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.2rem;
 }
 
 .select_wrapper img {
@@ -20,8 +29,8 @@
     border: none;
     appearance: none;
     width: 100%;
-    background-color: var(--secondary-1);
-    color: var(--primary-5);
+    background-color: var(--primary-2);
+    color: var(--primary-1);
     position: absolute;
     left: 0;
     top: 39px;
@@ -36,7 +45,6 @@
     transform: scaleY(1);
 }
 
-.change_button,
 .dropdown_li {
     display: flex;
     gap: 5px;
@@ -51,11 +59,11 @@
     cursor: pointer;
     transition: all 0.5s;
 }
-
+.select_wrapper:hover,
 .change_button:hover,
 .dropdown_li:hover {
-    color: var(--primary-1);
-    background-color: var(--primary-2);
+    color: var(--primary-3);
+    background-color: var(--secondary-1);
 }
 
 .icon_wrapper {
@@ -72,7 +80,7 @@
 }
 
 .icon_wrapper:hover {
-    color: var(--primary-1);
+    color: var(--primary-3);
     background-color: var(--primary-2);
 }
 

@@ -35,29 +35,26 @@ export default function Footer() {
                             <span className={cl.yellow_title}>
                                 {t("howtoorder:contact_excutsion")}
                             </span>
-                            <span> +90541 761 84 40</span>
+                            <span> +90000 000 00 00</span>
                         </div>
                         <div>
                             <span className={cl.yellow_title}>
                                 {t("howtoorder:contact_partners")}
                             </span>
-                            <span> +90541 761 84 40</span>
+                            <span> +90000 000 00 00</span>
                         </div>
                         <div>
                             <span className={cl.yellow_title}>
+                                {" "}
                                 UÇAK BİLETİ NO:
                             </span>
-                            <span> +90 242 814 22 39</span>
+                            <span> +90000 000 00 00</span>
                         </div>
                         <div>
                             <span className={cl.yellow_title}>
                                 {t("howtoorder:contact_address")}
                             </span>
-                            <span>
-                                {" "}
-                                BELDİBİ MAH. BAŞKOMUTAN ATATÜRK CAD. NO:184 C/1
-                                KEMER / ANTALYA
-                            </span>
+                            <span> KEMER / ANTALYA</span>
                         </div>
                     </div>
                 </div>{" "}

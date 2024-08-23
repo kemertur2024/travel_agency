@@ -1,9 +1,13 @@
+"use client";
+
 import cl from "./ProductItem.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { dollar } from "@/lib/constants/constants";
+import { useTranslation } from "react-i18next";
 
 export default function ProductItem({ child }) {
+    const { t } = useTranslation(["excursionName", "label"]);
     return (
         <>
             <Link
@@ -27,7 +31,7 @@ export default function ProductItem({ child }) {
                     />
                 </div>
                 <div className={cl.bottom}>
-                    <h3 className={cl.bottom_title}>{child.name}</h3>
+                    <h3 className={cl.bottom_title}>{t(child.nameKey)}</h3>
                     <div className={cl.bottom_price}>
                         {child.oldprice ? (
                             <span className={cl.oldprice}>
@@ -44,7 +48,7 @@ export default function ProductItem({ child }) {
                         </span>
                     </div>
                 </div>
-                <div className={cl.label}>{child.label}</div>
+                <div className={cl.label}>{t(`label:${child.labelKey}`)}</div>
             </Link>
         </>
     );
