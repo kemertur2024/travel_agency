@@ -10,7 +10,8 @@ const i18nNameSpaces = [
     "header",
     "advantages",
     "excursions",
-    "excursionName"
+    "excursionName",
+    "label",
 ];
 
 export default async function ExcursionPage({ params }) {
