@@ -2,8 +2,8 @@
 
 import cl from "./transfers.module.css";
 import Title from "@/components/layout/Title";
-import MyButton from "@/components/UI/MyButton";
-import MyModal from "@/components/UI/MyModal";
+import MyButton from "../../../components/UI/MyButton";
+import MyModal from "../../../components/UI/MyModal";
 
 import FormTransfer from "@/components/UI/FormTransfer";
 import { useState } from "react";
