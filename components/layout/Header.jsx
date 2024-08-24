@@ -8,7 +8,7 @@ import MobNav from "@/components/layout/MobNav";
 import Burger from "../UI/Burger";
 import { useState } from "react";
 import Link from "next/link";
-import MyButton from "../UI/myButton";
+import MyButton from "../UI/MyButton";
 
 export default function Header() {
     const [isNavOpen, setIsNavOpen] = useState(false);

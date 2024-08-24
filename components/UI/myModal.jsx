@@ -8,7 +8,7 @@
 //     );
 // }
 
-import "./myModal.css";
+import "./MyModal.css";
 
 export default function MyModal({ isOpen, toggleOpen, children }) {
     // Функция для предотвращения закрытия модалки при клике внутри
