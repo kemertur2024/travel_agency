@@ -17,7 +17,7 @@
     flex-direction: column;
     width: 100%;
     margin: 4px 0;
-    padding: 0.5rem;
+
     border-top: 2px solid var(--primary-2);
     border-bottom: 2px solid var(--primary-2);
 }
@@ -37,7 +37,7 @@
     justify-self: start;
     align-self: center;
     width: 132px;
-    height: 33px;
+    /* height: 33px; */
 }
 .img_wrap img {
     object-fit: cover;
@@ -137,19 +137,19 @@
 @media (max-width: 536px) {
     .img_wrap {
         width: 110px;
-        height: 28px;
+        /* height: 28px; */
     }
 }
 @media (max-width: 472px) {
     .img_wrap {
         width: 90px;
-        height: 23px;
+        /* height: 23px; */
     }
 }
 
 @media (max-width: 360px) {
     .img_wrap {
         width: 70px;
-        height: 18px;
+        /* height: 18px; */
     }
 }

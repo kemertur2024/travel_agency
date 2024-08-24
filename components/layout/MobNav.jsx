@@ -1,15 +1,28 @@
 "use client";
 
 import Link from "next/link";
-import "./MobNav.css";
+import cl from "./MobNav.module.css";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {
+    faPhone,
+    faEnvelope,
+    faChevronDown,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+    faTelegram,
+    faWhatsapp,
+    faInstagram,
+    faTwitter,
+    faViber,
+} from "@fortawesome/free-brands-svg-icons";
 import LanguageChanger from "../UI/LanguageChanger";
 import { useState } from "react";
 import MyButton from "../UI/myButton";
+import { useRouter } from "next/navigation";
 
 export default function Nav({ isOpen, closeMenu }) {
+    const router = useRouter();
     const { t } = useTranslation();
     const [openSubmenu, setOpenSubmenu] = useState(null);
 
@@ -19,9 +32,11 @@ export default function Nav({ isOpen, closeMenu }) {
 
     return (
         <>
-            <div className={`nav-overlay ${isOpen ? "open" : ""}`}></div>
-            <nav className={`mnavigation ${isOpen ? "open" : ""}`}>
-                <div className='mobnav_toprow'>
+            <div
+                className={` ${cl.nav_overlay} ${isOpen ? cl.open : ""}`}
+            ></div>
+            <nav className={` ${cl.mnavigation} ${isOpen ? cl.open : ""}`}>
+                <div className={cl.mobnav_toprow}>
                     <MyButton
                         onClick={(e) => {
                             e.preventDefault();
@@ -44,7 +59,10 @@ export default function Nav({ isOpen, closeMenu }) {
                         </Link>
                     </li>
                     <li>
-                        <div onClick={() => toggleSubmenu(1)} className='micon'>
+                        <div
+                            onClick={() => toggleSubmenu(1)}
+                            className={cl.micon}
+                        >
                             {t("nav:from_kemer")}
                             <FontAwesomeIcon icon={faChevronDown} />
                         </div>
@@ -88,7 +106,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             <li>
                                 <Link
                                     onClick={closeMenu}
-                                    href='/catalog/category/from_kemer'
+                                    href='/catalog/category/from_marmaris'
                                 >
                                     {t("nav:from_marmaris")}
                                 </Link>
@@ -145,14 +163,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             {t("nav:rent_villa")}
                         </Link>
                     </li>
-                    <li>
-                        <Link
-                            onClick={closeMenu}
-                            href='/catalog/category/medicine'
-                        >
-                            {t("nav:medicine")}
-                        </Link>
-                    </li>
+
                     <li>
                         <Link
                             onClick={closeMenu}
@@ -188,6 +199,68 @@ export default function Nav({ isOpen, closeMenu }) {
                         </Link>
                     </li>
                 </ul>
+                <div className={cl.socials_wrapper}>
+                    {" "}
+                    <div className={cl.footer__content}>
+                        <div className={cl.footer__icons}>
+                            <a
+                                href='https://wa.me/905350449927'
+                                target='_blank'
+                                className={cl.footer__link}
+                            >
+                                <FontAwesomeIcon
+                                    className={cl.icons}
+                                    icon={faWhatsapp}
+                                />
+                            </a>
+                            <a
+                                href='https://wa.me/905350449927'
+                                target='_blank'
+                                className={cl.footer__link}
+                            >
+                                <FontAwesomeIcon
+                                    className={cl.icons}
+                                    icon={faViber}
+                                />
+                            </a>
+                            <a
+                                href='mailto:kemertur2024@gmail.com?subject=Important-mail:&body=Hello.'
+                                type='email'
+                                className={cl.footer__link}
+                                target='_blank'
+                            >
+                                <FontAwesomeIcon
+                                    className={cl.icons}
+                                    icon={faEnvelope}
+                                />
+                            </a>
+                            <a
+                                href='https://t.me/+905350449927'
+                                target='_blank'
+                                className={cl.footer__link}
+                            >
+                                <FontAwesomeIcon
+                                    className={cl.icons}
+                                    icon={faTelegram}
+                                />
+                            </a>
+
+                            <a
+                                href='https://wa.me/905350449927'
+                                target='_blank'
+                                className={cl.footer__link}
+                            >
+                                <FontAwesomeIcon
+                                    className={cl.icons}
+                                    icon={faInstagram}
+                                />
+                            </a>
+                        </div>
+                    </div>
+                    <footer className={cl.copyright}>
+                        Copyright © 2023-2024 Kemer.app
+                    </footer>
+                </div>{" "}
             </nav>
         </>
     );

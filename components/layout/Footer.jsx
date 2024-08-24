@@ -7,6 +7,15 @@ import Form from "../UI/Form";
 import { useState } from "react";
 import MyModal from "../UI/myModal";
 import MyButton from "../UI/myButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+    faTelegram,
+    faWhatsapp,
+    faInstagram,
+    faTwitter,
+    faViber,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
     const { t } = useTranslation();
@@ -32,29 +41,42 @@ export default function Footer() {
                     </div>
                     <div className={cl.form_bottom}>
                         <div>
+                            {" "}
                             <span className={cl.yellow_title}>
-                                {t("howtoorder:contact_excutsion")}
+                                {t("howtoorder:contact_excutsion")}{" "}
                             </span>
-                            <span> +90000 000 00 00</span>
+                            <a href='tel:+905350449927' target='_blank'>
+                                +90 535 044 99 27
+                            </a>
                         </div>
                         <div>
                             <span className={cl.yellow_title}>
                                 {t("howtoorder:contact_partners")}
                             </span>
-                            <span> +90000 000 00 00</span>
+                            <a href='tel:+905350449927' target='_blank'>
+                                {" "}
+                                +90 535 044 99 27
+                            </a>
                         </div>
                         <div>
                             <span className={cl.yellow_title}>
                                 {" "}
                                 UÇAK BİLETİ NO:
                             </span>
-                            <span> +90000 000 00 00</span>
+                            <a href='tel:+905350449927' target='_blank'>
+                                {" "}
+                                +90 535 044 99 27
+                            </a>
                         </div>
                         <div>
                             <span className={cl.yellow_title}>
                                 {t("howtoorder:contact_address")}
                             </span>
-                            <span> KEMER / ANTALYA</span>
+                            <span>
+                                {" "}
+                                Antalia Kemer Kiris Sahil Caddesi Viking Park
+                                Otel 40/G
+                            </span>
                         </div>
                     </div>
                 </div>{" "}
@@ -164,7 +186,68 @@ export default function Footer() {
                     </nav>
                 </div>
             </div>
-            <div className={cl.socials_wrapper}>Мы в социальных сетях</div>{" "}
+            <div className={cl.socials_wrapper}>
+                {" "}
+                <div className={cl.footer__content}>
+                    <div className={cl.footer__icons}>
+                        <a
+                            href='https://wa.me/905350449927'
+                            target='_blank'
+                            className={cl.footer__link}
+                        >
+                            <FontAwesomeIcon
+                                className={cl.icons}
+                                icon={faWhatsapp}
+                            />
+                        </a>
+                        <a
+                            href='https://wa.me/905350449927'
+                            target='_blank'
+                            className={cl.footer__link}
+                        >
+                            <FontAwesomeIcon
+                                className={cl.icons}
+                                icon={faViber}
+                            />
+                        </a>
+                        <a
+                            href='mailto:kemertur2024@gmail.com?subject=Important-mail:&body=Hello.'
+                            type='email'
+                            className={cl.footer__link}
+                            target='_blank'
+                        >
+                            <FontAwesomeIcon
+                                className={cl.icons}
+                                icon={faEnvelope}
+                            />
+                        </a>
+                        <a
+                            href='https://t.me/+905350449927'
+                            target='_blank'
+                            className={cl.footer__link}
+                        >
+                            <FontAwesomeIcon
+                                className={cl.icons}
+                                icon={faTelegram}
+                            />
+                        </a>
+
+                        <a
+                            href='https://wa.me/905350449927'
+                            target='_blank'
+                            className={cl.footer__link}
+                        >
+                            <FontAwesomeIcon
+                                className={cl.icons}
+                                icon={faInstagram}
+                            />
+                        </a>
+                    </div>
+                </div>
+                <footer className={cl.copyright}>
+                    Copyright © 2023-2024 Kemer.app
+                </footer>
+            </div>{" "}
             <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
                 <Form />
             </MyModal>

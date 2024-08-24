@@ -71,9 +71,7 @@ export default function Nav() {
                         </Link>
                     </li>
                     <li>
-                        <Link href='/transfers'>
-                            {t("nav:transfers")}
-                        </Link>
+                        <Link href='/transfers'>{t("nav:transfers")}</Link>
                     </li>
                     <li>
                         <Link href='/catalog/category/vip'>{t("nav:vip")}</Link>
@@ -88,11 +86,7 @@ export default function Nav() {
                             {t("nav:rent_villa")}
                         </Link>
                     </li>
-                    <li>
-                        <Link href='/catalog/category/medicine'>
-                            {t("nav:medicine")}
-                        </Link>
-                    </li>
+
                     <li>
                         <Link href='/'>
                             {t("nav:more")}
