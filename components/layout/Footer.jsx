@@ -8,14 +8,8 @@ import { useState } from "react";
 import MyModal from "@/components/UI/MyCustomModal";
 import MyButton from "@/components/UI/MyCustomButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-    faTelegram,
-    faWhatsapp,
-    faInstagram,
-    faTwitter,
-    faViber,
-} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import Social from "../UI/Soсial";
 
 export default function Footer() {
     const { t } = useTranslation();
@@ -187,67 +181,8 @@ export default function Footer() {
                 </div>
             </div>
             <div className={cl.socials_wrapper}>
-                {" "}
-                <div className={cl.footer__content}>
-                    <div className={cl.footer__icons}>
-                        <a
-                            href='https://wa.me/905350449927'
-                            target='_blank'
-                            className={cl.footer__link}
-                        >
-                            <FontAwesomeIcon
-                                className={cl.icons}
-                                icon={faWhatsapp}
-                            />
-                        </a>
-                        <a
-                            href='viber://add?number=905350449927'
-                            target='_blank'
-                            className={cl.footer__link}
-                        >
-                            <FontAwesomeIcon
-                                className={cl.icons}
-                                icon={faViber}
-                            />
-                        </a>
-                        <a
-                            href='mailto:kemertur2024@gmail.com?subject=Important-mail:&body=Hello.'
-                            type='email'
-                            className={cl.footer__link}
-                            target='_blank'
-                        >
-                            <FontAwesomeIcon
-                                className={cl.icons}
-                                icon={faEnvelope}
-                            />
-                        </a>
-                        <a
-                            href='https://t.me/+905350449927'
-                            target='_blank'
-                            className={cl.footer__link}
-                        >
-                            <FontAwesomeIcon
-                                className={cl.icons}
-                                icon={faTelegram}
-                            />
-                        </a>
-
-                        <a
-                            href='https://www.instagram.com/sultan_kemer_kiris?igsh=M2UydWt4bnU2cmVk'
-                            target='_blank'
-                            className={cl.footer__link}
-                        >
-                            <FontAwesomeIcon
-                                className={cl.icons}
-                                icon={faInstagram}
-                            />
-                        </a>
-                    </div>
-                </div>
-                <footer className={cl.copyright}>
-                    Copyright © 2023-2024 Kemer.app
-                </footer>
-            </div>{" "}
+               <Social/>
+            </div>
             <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
                 <Form />
             </MyModal>
