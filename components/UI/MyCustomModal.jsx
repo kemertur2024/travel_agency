@@ -8,7 +8,7 @@
 //     );
 // }
 
-import "./MyCustomModal.css";
+import cl from "./MyCustomModal.module.css";
 
 export default function MyCustomModal({ isOpen, toggleOpen, children }) {
     // Функция для предотвращения закрытия модалки при клике внутри
@@ -17,7 +17,10 @@ export default function MyCustomModal({ isOpen, toggleOpen, children }) {
     };
 
     return (
-        <div className={`overlay ${isOpen ? "open" : ""}`} onClick={toggleOpen}>
+        <div
+            onClick={toggleOpen}
+            className={`${cl.overlay}  ${isOpen ? cl.open : ""}`}
+        >
             <div className='modal' onClick={handleModalClick}>
                 {children}
             </div>
