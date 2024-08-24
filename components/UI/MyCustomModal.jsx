@@ -8,9 +8,9 @@
 //     );
 // }
 
-import "./MyModal.css";
+import "./MyCustomModal.css";
 
-export default function MyModal({ isOpen, toggleOpen, children }) {
+export default function MyCustomModal({ isOpen, toggleOpen, children }) {
     // Функция для предотвращения закрытия модалки при клике внутри
     const handleModalClick = (e) => {
         e.stopPropagation();

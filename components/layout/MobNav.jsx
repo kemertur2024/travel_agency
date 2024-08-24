@@ -18,7 +18,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import LanguageChanger from "../UI/LanguageChanger";
 import { useState } from "react";
-import MyButton from "../UI/MyButton";
+import MyButton from "../UI/MyCustomButton";
 import { useRouter } from "next/navigation";
 
 export default function Nav({ isOpen, closeMenu }) {

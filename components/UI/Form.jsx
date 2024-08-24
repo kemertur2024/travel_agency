@@ -2,7 +2,7 @@
 
 import cl from "./Form.module.css";
 import { useTranslation } from "react-i18next";
-import MyButton from "./MyButton";
+import MyCustomButton from "./MyCustomButton";
 import { useRef } from "react";
 import { gotowhatsapp } from "@/helpers/gotowhatsapp";
 
@@ -86,9 +86,9 @@ export default function Form() {
                     ></textarea>
                 </div>
                 <div className={cl.button_wrapper}>
-                    <MyButton type='submit'>
+                    <MyCustomButton type='submit'>
                         {t("howtoorder:form_button")}
-                    </MyButton>
+                    </MyCustomButton>
                 </div>
             </form>
         </>

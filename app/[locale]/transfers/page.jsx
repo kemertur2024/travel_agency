@@ -2,8 +2,8 @@
 
 import cl from "./transfers.module.css";
 import Title from "@/components/layout/Title";
-import MyButton from "../../../components/UI/MyButton";
-import MyModal from "../../../components/UI/MyModal";
+import MyCustomButton from "@/components/UI/MyCustomButton";
+import MyCustomModal from "@/components/UI/MyCustomModal";
 
 import FormTransfer from "@/components/UI/FormTransfer";
 import { useState } from "react";
@@ -25,9 +25,9 @@ export default function TransfersPage() {
                         className={cl.transfers_img}
                     />
                 </div>
-                <MyButton onClick={toggleOpen}>
+                <MyCustomButton onClick={toggleOpen}>
                     {t("transfers:transfers_btn")}
-                </MyButton>
+                </MyCustomButton>
                 <div className={cl.transfers_text}>
                     <h2>{t("transfers:title1")}</h2>
                     <p>{t("transfers:text1")}</p>
@@ -44,9 +44,9 @@ export default function TransfersPage() {
                     <h2>{t("transfers:title7")}</h2>
                     <p>{t("transfers:text7")}</p>
                 </div>
-                <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
+                <MyCustomModal isOpen={isOpen} toggleOpen={toggleOpen}>
                     <FormTransfer />
-                </MyModal>
+                </MyCustomModal>
             </div>
         </>
     );

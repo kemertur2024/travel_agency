@@ -5,8 +5,8 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import Form from "../UI/Form";
 import { useState } from "react";
-import MyModal from "@/components/UI/MyModal";
-import MyButton from "@/components/UI/MyButton";
+import MyModal from "@/components/UI/MyCustomModal";
+import MyButton from "@/components/UI/MyCustomButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {

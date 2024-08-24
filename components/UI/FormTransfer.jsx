@@ -2,7 +2,7 @@
 
 import cl from "./Form.module.css";
 import { useTranslation } from "react-i18next";
-import MyButton from "./MyButton";
+import MyButton from "./MyCustomButton";
 
 export default function FormTransfer() {
     const { t } = useTranslation();
