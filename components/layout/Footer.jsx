@@ -201,7 +201,7 @@ export default function Footer() {
                             />
                         </a>
                         <a
-                            href='https://wa.me/905350449927'
+                            href='viber://add?number=905350449927'
                             target='_blank'
                             className={cl.footer__link}
                         >
@@ -233,7 +233,7 @@ export default function Footer() {
                         </a>
 
                         <a
-                            href='https://wa.me/905350449927'
+                            href='https://www.instagram.com/sultan_kemer_kiris?igsh=M2UydWt4bnU2cmVk'
                             target='_blank'
                             className={cl.footer__link}
                         >
