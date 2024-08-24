@@ -1,6 +1,6 @@
 "use client";
 
-import cl from "./MyButton.module.css";
+import cl from "./MyCustomButton.module.css";
 
 export default function MyCustomButton({ children, ...props }) {
     return (
