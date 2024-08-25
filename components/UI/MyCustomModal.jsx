@@ -21,7 +21,7 @@ export default function MyCustomModal({ isOpen, toggleOpen, children }) {
             onClick={toggleOpen}
             className={`${cl.overlay}  ${isOpen ? cl.open : ""}`}
         >
-            <div className='modal' onClick={handleModalClick}>
+            <div className={cl.modal} onClick={handleModalClick}>
                 {children}
             </div>
         </div>
