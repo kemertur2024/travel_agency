@@ -21,7 +21,7 @@ export default function Header() {
             <div className='main_row'>
                 <div className='main_top_row'>
                     <Link href='/' className='img_wrap'>
-                        <img src='/images/logo/Logo.webp' alt='Rom travel' />
+                        <img src='/images/logo/Logo.webp' alt='logo' />
                     </Link>
                     <div className='label_1'>
                         <div>{t("header:excursions")}</div>
