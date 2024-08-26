@@ -1,0 +1,25 @@
+.faq_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1rem;
+}
+.faq_wrapper details {
+    border: 1px solid var(--primary-2);
+    padding: 0 1rem;
+    text-align: justify;
+    text-indent: 1rem;
+}
+.faq_wrapper details + details {
+    border-top: none;
+}
+.faq_wrapper details[open] {
+    text-indent: 1rem;
+    padding-bottom: 1em;
+}
+.faq_wrapper summary {
+    padding: 1rem 2em 1rem 0;
+    font-size: 1.1rem;
+    text-align: start;
+    cursor: pointer;
+}

@@ -102,14 +102,12 @@ export default function Nav() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/catalog/category/contacts'>
+                                <Link href='/contacts'>
                                     {t("nav:contacts")}
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/catalog/category/faq'>
-                                    {t("nav:faq")}
-                                </Link>
+                                <Link href='/faq'>{t("nav:faq")}</Link>
                             </li>
                             <li>
                                 <Link href='/catalog/category/blog'>

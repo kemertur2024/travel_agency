@@ -1,0 +1,11 @@
+.politic_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0 1rem;
+}
+
+.politic_wrapper h2 {
+    font-size: 1rem;
+}

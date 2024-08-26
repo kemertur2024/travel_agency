@@ -7,8 +7,7 @@ import Form from "../UI/Form";
 import { useState } from "react";
 import MyModal from "@/components/UI/MyCustomModal";
 import MyButton from "@/components/UI/MyCustomButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import Copyright from "../UI/copyright";
 import Social from "../UI/Soсial";
 
 export default function Footer() {
@@ -126,7 +125,7 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/catalog/category/transfers'>
+                                <Link href='/transfers'>
                                     {t("nav:transfers")}
                                 </Link>
                             </li>
@@ -145,11 +144,6 @@ export default function Footer() {
                                     {t("nav:rent_villa")}
                                 </Link>
                             </li>
-                            <li>
-                                <Link href='/catalog/category/medicine'>
-                                    {t("nav:medicine")}
-                                </Link>
-                            </li>
                         </ul>
                         <ul>
                             <span className={cl.yellow_title}>
@@ -162,12 +156,12 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/catalog/category/contacts'>
+                                <Link href='/contacts'>
                                     {t("nav:contacts")}
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/catalog/category/faq'>
+                                <Link href='/faq'>
                                     {t("nav:faq")}
                                 </Link>
                             </li>
@@ -181,7 +175,8 @@ export default function Footer() {
                 </div>
             </div>
             <div className={cl.socials_wrapper}>
-               <Social/>
+                <Social />
+                <Copyright />
             </div>
             <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
                 <Form />

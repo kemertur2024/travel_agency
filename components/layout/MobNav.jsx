@@ -163,15 +163,12 @@ export default function Nav({ isOpen, closeMenu }) {
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            onClick={closeMenu}
-                            href='/catalog/category/contacts'
-                        >
+                        <Link onClick={closeMenu} href='/contacts'>
                             {t("nav:contacts")}
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/catalog/category/faq'>
+                        <Link onClick={closeMenu} href='/faq'>
                             {t("nav:faq")}
                         </Link>
                     </li>

@@ -66,9 +66,6 @@ export default function Social() {
                     </a>
                 </div>
             </div>
-            <footer className={cl.copyright}>
-                Copyright © 2024 Kemer-tur.net
-            </footer>
         </>
     );
 }

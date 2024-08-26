@@ -13,6 +13,8 @@
     border-radius: 0.5rem;
     transition: all 0.5s;
     overflow: hidden;
+    border: 1px solid var(--primary-2);
+    margin-bottom: 0.5rem;
 }
 .img_wrapper img {
     width: 100%;
