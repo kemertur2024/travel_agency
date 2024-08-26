@@ -20,7 +20,7 @@ const open_sans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata = {
     title: `Туристическое агенство "${process.env.FIRM_NAME}"`,
-    description: `Экскурсии в Кемере от '${process.env.FIRM_NAME}' ( Ром тревел ) Анталия актуальные цены 2024, описание, отзывы, аренда яхты и авто трансферы Кемер - Анталия. Закажите экскурсию онлайн на нашем сайте без предоплаты.`,
+    description: `Экскурсии в Кемере от '${process.env.FIRM_NAME}' Анталия актуальные цены 2024, описание, отзывы, аренда яхты и авто трансферы Кемер - Анталия. Закажите экскурсию онлайн на нашем сайте без предоплаты.`,
 };
 
 export default async function RootLayout({ children, params }) {

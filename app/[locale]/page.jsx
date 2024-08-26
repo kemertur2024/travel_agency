@@ -33,11 +33,11 @@ export default async function HomePage({ params: { locale } }) {
                     <h1 className='hiddenTitle'>{`Туристическое агенство ${process.env.FIRM_NAME}`}</h1>
                 </div>
                 <Services />
-                <Advantages />
                 <Popular />
                 <RentYaht />
                 <RentAvto />
                 <Individual />
+                <Advantages />
             </main>
         </TranslationsProvider>
     );

@@ -28,10 +28,14 @@ export default function ProductDetails({ item }) {
                             {item.price}
                             {dollar}
                         </span>
-                        <span className={cl.oldprice}>
-                            {item.oldprice}
-                            {dollar}
-                        </span>
+                        {item.oldprice ? (
+                            <span className={cl.oldprice}>
+                                {item.oldprice}
+                                {dollar}
+                            </span>
+                        ) : (
+                            ""
+                        )}
                     </div>
                     <div className={cl.description}>
                         <Markdown

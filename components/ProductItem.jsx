@@ -33,6 +33,10 @@ export default function ProductItem({ child }) {
                 <div className={cl.bottom}>
                     <h3 className={cl.bottom_title}>{t(child.nameKey)}</h3>
                     <div className={cl.bottom_price}>
+                        <span className={cl.price}>
+                            {child.price}
+                            {dollar}
+                        </span>
                         {child.oldprice ? (
                             <span className={cl.oldprice}>
                                 {child.oldprice}
@@ -41,11 +45,6 @@ export default function ProductItem({ child }) {
                         ) : (
                             ""
                         )}
-
-                        <span className={cl.price}>
-                            {child.price}
-                            {dollar}
-                        </span>
                     </div>
                 </div>
                 <div className={cl.label}>{t(`label:${child.labelKey}`)}</div>
