@@ -7,7 +7,7 @@ import Form from "../UI/Form";
 import { useState } from "react";
 import MyModal from "@/components/UI/MyCustomModal";
 import MyButton from "@/components/UI/MyCustomButton";
-import Copyright from "../UI/copyright";
+import Copyright from "../UI/Copyright";
 import Social from "../UI/Soсial";
 
 export default function Footer() {
@@ -161,9 +161,7 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/faq'>
-                                    {t("nav:faq")}
-                                </Link>
+                                <Link href='/faq'>{t("nav:faq")}</Link>
                             </li>
                             <li>
                                 <Link href='/catalog/category/blog'>
