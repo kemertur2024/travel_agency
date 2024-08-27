@@ -71,7 +71,7 @@ export default async function ContactsPage({ params }) {
                         </span>
                     </div>
                     <a
-                        href='https://yandex.ru/maps/-/CDsWBKn0'
+                        href='https://yandex.ru/maps/-/CDs0zTkD'
                         className={cl.map_wrapper}
                     >
                         <img
