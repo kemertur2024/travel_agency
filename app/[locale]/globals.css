@@ -11,8 +11,8 @@
     --secondary-3: #472d53;
     --secondary-4: #341b47;
 
-    --secondary-b-1: rgba(51, 255, 0, 1); /* Вторичный Цвет B */
-    --secondary-b-2: rgba(102, 102, 51, 1);
+    --secondary-b-1: #e6e6e6; /* Вторичный Цвет B */
+    --secondary-b-2: #b3b3b3;
     --secondary-b-3: rgba(0, 51, 0, 1);
     --secondary-b-4: rgba(153, 255, 153, 1);
 

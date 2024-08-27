@@ -97,9 +97,7 @@ export default function Nav() {
                         </Link>
                         <ul>
                             <li>
-                                <Link href='/catalog/category/reviews'>
-                                    {t("nav:reviews")}
-                                </Link>
+                                <Link href='/reviews'>{t("nav:reviews")}</Link>
                             </li>
                             <li>
                                 <Link href='/contacts'>
@@ -110,9 +108,7 @@ export default function Nav() {
                                 <Link href='/faq'>{t("nav:faq")}</Link>
                             </li>
                             <li>
-                                <Link href='/catalog/category/blog'>
-                                    {t("nav:blog")}
-                                </Link>
+                                <Link href='/blog'>{t("nav:blog")}</Link>
                             </li>
                         </ul>
                     </li>

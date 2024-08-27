@@ -1,5 +1,5 @@
 import cl from "./Politic.module.css";
-import Social from "@/components/UI/Soсial";
+
 import Title from "@/components/layout/Title";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "@/app/i18n";

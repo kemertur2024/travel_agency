@@ -157,7 +157,7 @@ export default function Nav({ isOpen, closeMenu }) {
                     <li>
                         <Link
                             onClick={closeMenu}
-                            href='/catalog/category/reviews'
+                            href='/reviews'
                         >
                             {t("nav:reviews")}
                         </Link>
@@ -175,13 +175,13 @@ export default function Nav({ isOpen, closeMenu }) {
                     <li>
                         <Link
                             onClick={closeMenu}
-                            href='/catalog/category/politic'
+                            href='/politic'
                         >
                             {t("nav:politic")}
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/catalog/category/blog'>
+                        <Link onClick={closeMenu} href='/blog'>
                             {t("nav:blog")}
                         </Link>
                     </li>
