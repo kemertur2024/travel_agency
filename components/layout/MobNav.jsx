@@ -4,9 +4,8 @@ import Link from "next/link";
 import cl from "./MobNav.module.css";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Social from "../UI/Soсial";
-import LanguageChanger from "../UI/LanguageChanger";
 import { useState } from "react";
 import MyButton from "../UI/MyCustomButton";
 import { useRouter } from "next/navigation";
@@ -35,7 +34,6 @@ export default function Nav({ isOpen, closeMenu }) {
                     >
                         Заказать
                     </MyButton>
-                    <LanguageChanger />
                 </div>
                 <ul>
                     <li>
@@ -155,10 +153,7 @@ export default function Nav({ isOpen, closeMenu }) {
                     </li>
 
                     <li>
-                        <Link
-                            onClick={closeMenu}
-                            href='/reviews'
-                        >
+                        <Link onClick={closeMenu} href='/reviews'>
                             {t("nav:reviews")}
                         </Link>
                     </li>
@@ -173,10 +168,7 @@ export default function Nav({ isOpen, closeMenu }) {
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            onClick={closeMenu}
-                            href='/politic'
-                        >
+                        <Link onClick={closeMenu} href='/politic'>
                             {t("nav:politic")}
                         </Link>
                     </li>

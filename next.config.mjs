@@ -8,10 +8,10 @@ const nextConfig = {
         WHATSAPP_LINK:
             process.env.WHATSAPP_LINK ||
             "https://api.whatsapp.com/send/?phone=905350449927&amp;text&amp;type=phone_number&amp;app_absent=0",
-        CHAT_ID: process.env.CHAT_ID || "-1001910999829",
+        CHAT_ID: process.env.CHAT_ID || "97913863",
         URI_API_TG:
             process.env.URI_API_TG ||
-            `https://api.telegram.org/bot6071602927:AAHrz9Zz_U73G_1_YwxMjquPsGe5sC6WBAE/sendMessage`,
+            `https://api.telegram.org/bot7197991190:AAF3XgWX2feTTnHK9Dk_okaxkKQM3pgkFKM/sendMessage`,
     },
 };
 

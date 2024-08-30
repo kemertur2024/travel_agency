@@ -14,6 +14,9 @@ export default function Footer() {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => setIsOpen(!isOpen);
+    const handleSuccess = () => {
+        setIsOpen(false); // Закрыть модальное окно
+    };
     return (
         <footer className={cl.footer_wrapper}>
             <div className={cl.footer}>
@@ -177,7 +180,7 @@ export default function Footer() {
                 <Copyright />
             </div>
             <MyModal isOpen={isOpen} toggleOpen={toggleOpen}>
-                <Form />
+                <Form onSuccess={handleSuccess} />
             </MyModal>
         </footer>
     );

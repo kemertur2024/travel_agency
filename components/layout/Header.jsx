@@ -1,7 +1,7 @@
 "use client";
 
 import LanguageChanger from "../UI/LanguageChanger";
-import "./Header.css";
+import cl from "./Header.module.css";
 import { useTranslation } from "react-i18next";
 import Nav from "@/components/layout/Nav";
 import MobNav from "@/components/layout/MobNav";
@@ -9,6 +9,7 @@ import Burger from "../UI/Burger";
 import { useState } from "react";
 import Link from "next/link";
 import MyButton from "../UI/MyCustomButton";
+import LanguageChangerMob from "../UI/LanguageChangerMob";
 
 export default function Header() {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -17,22 +18,22 @@ export default function Header() {
 
     const { t } = useTranslation();
     return (
-        <header className='header'>
-            <div className='main_row'>
-                <div className='main_top_row'>
-                    <Link href='/' className='img_wrap'>
+        <header className={cl.header}>
+            <div className={cl.main_row}>
+                <div className={cl.main_top_row}>
+                    <Link href='/' className={cl.img_wrap}>
                         <img src='/images/logo/Logo.webp' alt='logo' />
                     </Link>
-                    <div className='label_1'>
+                    <div className={cl.label_1}>
                         <div>{t("header:excursions")}</div>
-                        <div className='label_1_bottom'>
-                            <span className='yellow_span'>
+                        <div className={cl.label_1_bottom}>
+                            <span className={cl.yellow_span}>
                                 {t("header:subtitle")}
                             </span>{" "}
                         </div>
                     </div>
-                    <div className='right'>
-                        <div className='label_2'>
+                    <div className={cl.right}>
+                        <div className={cl.label_2}>
                             <MyButton
                                 onClick={(e) => {
                                     e.preventDefault();
@@ -44,7 +45,10 @@ export default function Header() {
                         </div>
                         <LanguageChanger />
                     </div>
-                    <Burger toggleNav={toggleNav} isNavOpen={isNavOpen} />
+                    <div className={cl.btn_wrapper}>
+                        <LanguageChangerMob />
+                        <Burger toggleNav={toggleNav} isNavOpen={isNavOpen} />
+                    </div>
                 </div>
             </div>
 

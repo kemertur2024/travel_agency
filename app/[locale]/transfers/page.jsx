@@ -14,6 +14,10 @@ export default function TransfersPage() {
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => setIsOpen(!isOpen);
 
+    const handleSuccess = () => {
+        setIsOpen(false); // Закрыть модальное окно
+    };
+
     return (
         <>
             <div className={cl.transfers_wrapper}>
@@ -45,7 +49,7 @@ export default function TransfersPage() {
                     <p>{t("transfers:text7")}</p>
                 </div>
                 <MyCustomModal isOpen={isOpen} toggleOpen={toggleOpen}>
-                    <FormTransfer />
+                    <FormTransfer onSuccess={handleSuccess} />
                 </MyCustomModal>
             </div>
         </>

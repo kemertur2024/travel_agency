@@ -5,6 +5,7 @@ import cl from "./page.module.css";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "@/app/i18n";
 import Title from "@/components/layout/Title";
+import { shuffleArray } from "@/helpers/helpers";
 
 const i18nNameSpaces = [
     "HomePage",
@@ -24,7 +25,8 @@ export default async function ExcursionPage({ params }) {
     const title = NavList.find((item) => item.nameKey == params.slug);
 
     const tags = [params.slug];
-    const data = filterByTags(tags);
+    const filteredData = filterByTags(tags);
+    const data = shuffleArray(filteredData);
 
     return (
         <>

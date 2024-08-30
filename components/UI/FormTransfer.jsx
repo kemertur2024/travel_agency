@@ -4,11 +4,13 @@ import cl from "./Form.module.css";
 import { useTranslation } from "react-i18next";
 import MyCustomButton from "./MyCustomButton";
 import { useRef } from "react";
-import { gotowhatsapp } from "@/helpers/gotowhatsapp";
+import TGMessage from "@/helpers/TGMessage";
+import { useRouter } from "next/navigation";
 
-export default function FormTransfer() {
+export default function FormTransfer({ onSuccess }) {
     const { t } = useTranslation();
     const formRef = useRef(null);
+    const router = useRouter();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,7 +30,9 @@ export default function FormTransfer() {
         };
 
         // Вызов функции для отправки данных на WhatsApp
-        gotowhatsapp(data);
+        TGMessage(data);
+        onSuccess(); // Закрыть модальное окно после успешной отправки
+        router.push("./thanks");
     };
 
     return (

@@ -12,7 +12,6 @@ import cl from "./Social.module.css";
 export default function Social() {
     return (
         <>
-            {" "}
             <div className={cl.footer__content}>
                 <div className={cl.footer__icons}>
                     <a
@@ -64,6 +63,9 @@ export default function Social() {
                             icon={faInstagram}
                         />
                     </a>
+                </div>
+                <div className={cl.license_img}>
+                    <img src='/images/other/license.webp' alt='license' />
                 </div>
             </div>
         </>
