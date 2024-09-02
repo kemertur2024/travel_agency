@@ -78,6 +78,14 @@ export default function LanguageChanger() {
                     <img src='/images/other/EN.webp' alt='eng' />
                     EN
                 </li>
+                <li className='dropdown_li'>
+                    <img src='/images/other/DE.webp' alt='de' />
+                    DE
+                </li>
+                <li className='dropdown_li'>
+                    <img src='/images/other/PL.webp' alt='pl' />
+                    PL
+                </li>
             </ul>
             <input type='text' hidden readOnly value={currentLocale} />
         </div>

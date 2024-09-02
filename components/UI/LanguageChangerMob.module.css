@@ -1,56 +1,41 @@
-.input[type="checkbox"] {
+.radio_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 200px; /* Adjust according to your design */
+    margin: 0 auto;
+    gap: 0.5rem;
+}
+
+.radio_label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-2);
+    border-radius: 100px;
+    position: relative;
+}
+
+.radio_label img {
+    width: 22px;
+    height: 22px;
+    border-radius: 100px;
+}
+
+.radio_input {
     height: 0;
     width: 0;
     visibility: hidden;
 }
 
-.label {
-    cursor: pointer;
-    width: 46px;
-    height: 24px;
-    background: var(--primary-2);
-    display: block;
-    border-radius: 100px;
-    position: relative;
-}
-
-.img_wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: 2px;
-}
-.label img {
-    cursor: pointer;
-    width: 19px;
-    height: 19px;
-    background: var(--primary-2);
-    display: block;
+.radio_input:checked + img {
+    border: 2px solid var(--primary-5); /* To highlight the selected language */
     border-radius: 100px;
 }
 
-.label:after {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    border-radius: 90px;
-    transition: 0.3s;
-}
-
-.input:checked + label {
-    background: var(--primary-5);
-}
-
-.input:checked + .label:after {
-    left: calc(100% - 2px);
-    transform: translateX(-100%);
-}
-
-.label:active:after {
-    width: 20px;
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }

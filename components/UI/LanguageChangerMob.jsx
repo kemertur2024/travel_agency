@@ -35,31 +35,59 @@ export default function LanguageChangerMob() {
         router.refresh();
     };
 
-    const handleToggle = () => {
-        const newLocale = selectedLocale === "ru" ? "en" : "ru";
+    const handleRadioChange = (event) => {
+        const newLocale = event.target.value;
         setSelectedLocale(newLocale);
         handleChange(newLocale);
     };
 
-    useEffect(() => {
-        document.getElementById("switch").checked = selectedLocale === "ru";
-    }, [selectedLocale]);
-
     return (
-        <>
-            <input
-                type='checkbox'
-                id='switch'
-                className={cl.input}
-                onChange={handleToggle}
-                checked={selectedLocale === "ru"}
-            />
-            <label htmlFor='switch' className={cl.label}>
-                <div className={cl.img_wrapper}>
-                    <img src='/images/other/EN.webp' alt='en' />
-                    <img src='/images/other/RU.webp' alt='ru' />
-                </div>
+        <div className={cl.radio_group}>
+            <label className={cl.radio_label}>
+                <input
+                    type='radio'
+                    name='language'
+                    value='en'
+                    checked={selectedLocale === "en"}
+                    onChange={handleRadioChange}
+                    className={cl.radio_input}
+                />
+                <img src='/images/other/EN.webp' alt='English' />
             </label>
-        </>
+
+            <label className={cl.radio_label}>
+                <input
+                    type='radio'
+                    name='language'
+                    value='ru'
+                    checked={selectedLocale === "ru"}
+                    onChange={handleRadioChange}
+                    className={cl.radio_input}
+                />
+                <img src='/images/other/RU.webp' alt='Russian' />
+            </label>
+
+            <label className={`${cl.radio_label} ${cl.disabled}`}>
+                <input
+                    type='radio'
+                    name='language'
+                    value='pl'
+                    disabled
+                    className={cl.radio_input}
+                />
+                <img src='/images/other/PL.webp' alt='Polish' />
+            </label>
+
+            <label className={`${cl.radio_label} ${cl.disabled}`}>
+                <input
+                    type='radio'
+                    name='language'
+                    value='de'
+                    disabled
+                    className={cl.radio_input}
+                />
+                <img src='/images/other/DE.webp' alt='German' />
+            </label>
+        </div>
     );
 }
