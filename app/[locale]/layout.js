@@ -44,7 +44,7 @@ export default async function RootLayout({ children, params }) {
 
                     <meta
                         name='yandex-verification'
-                        content='4910d4d4a23be827'
+                        content='951841930c189c24'
                     />
 
                     {/*Yandex.Metrika counter*/}

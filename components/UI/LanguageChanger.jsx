@@ -4,10 +4,8 @@ import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import i18nConfig from "@/i18nConfig";
-import "./LanguageChanger.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import cl from "./LanguageChanger.module.css";
 
 export default function LanguageChanger() {
     const { i18n } = useTranslation();
@@ -15,7 +13,6 @@ export default function LanguageChanger() {
     const router = useRouter();
     const currentPathname = usePathname();
     const [selectedLocale, setSelectedLocale] = useState(currentLocale);
-    const [open, setOpen] = useState(false);
 
     const handleChange = (newLocale) => {
         // set cookie for next-i18n-router
@@ -40,54 +37,59 @@ export default function LanguageChanger() {
         router.refresh();
     };
 
-    const handleClick = (newLocale) => {
+    const handleRadioChange = (event) => {
+        const newLocale = event.target.value;
         setSelectedLocale(newLocale);
         handleChange(newLocale);
-        setOpen(false);
-    };
-
-    const toggleDropdown = () => {
-        setOpen(!open);
     };
 
     return (
-        <div className='select_wrapper'>
-            <div className='change_button' onClick={toggleDropdown}>
-                <img
-                    src={`/images/other/${selectedLocale.toUpperCase()}.webp`}
-                    alt={selectedLocale}
+        <div className={cl.radio_group}>
+            <label className={cl.radio_label}>
+                <input
+                    type='radio'
+                    name='language'
+                    value='en'
+                    checked={selectedLocale === "en"}
+                    onChange={handleRadioChange}
+                    className={cl.radio_input}
                 />
-                {selectedLocale.toUpperCase()}
-                {open ? (
-                    <div className='icon'>
-                        <FontAwesomeIcon icon={faChevronUp} />
-                    </div>
-                ) : (
-                    <div className='icon'>
-                        <FontAwesomeIcon icon={faChevronDown} />
-                    </div>
-                )}
-            </div>
+                <img src='/images/other/EN.webp' alt='English' />
+            </label>
 
-            <ul className={`dropdown_ul ${open ? "open" : ""}`}>
-                <li className='dropdown_li' onClick={() => handleClick("ru")}>
-                    <img src='/images/other/RU.webp' alt='rus' />
-                    RU
-                </li>
-                <li className='dropdown_li' onClick={() => handleClick("en")}>
-                    <img src='/images/other/EN.webp' alt='eng' />
-                    EN
-                </li>
-                <li className='dropdown_li'>
-                    <img src='/images/other/DE.webp' alt='de' />
-                    DE
-                </li>
-                <li className='dropdown_li'>
-                    <img src='/images/other/PL.webp' alt='pl' />
-                    PL
-                </li>
-            </ul>
-            <input type='text' hidden readOnly value={currentLocale} />
+            <label className={cl.radio_label}>
+                <input
+                    type='radio'
+                    name='language'
+                    value='ru'
+                    checked={selectedLocale === "ru"}
+                    onChange={handleRadioChange}
+                    className={cl.radio_input}
+                />
+                <img src='/images/other/RU.webp' alt='Russian' />
+            </label>
+
+            <label className={`${cl.radio_label} ${cl.disabled}`}>
+                <input
+                    type='radio'
+                    name='language'
+                    value='pl'
+                    disabled
+                    className={cl.radio_input}
+                />
+                <img src='/images/other/PL.webp' alt='Polish' />
+            </label>
+
+            <label className={`${cl.radio_label} ${cl.disabled}`}>
+                <input
+                    type='radio'
+                    name='language'
+                    value='de'
+                    disabled
+                    className={cl.radio_input}
+                />
+                <img src='/images/other/DE.webp' alt='German' />
+            </label>
         </div>
     );
 }

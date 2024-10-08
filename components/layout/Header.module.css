@@ -80,6 +80,7 @@
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+    justify-self: end;
 }
 .label_2 {
     font-size: 0.8rem;
@@ -112,7 +113,7 @@
     .name_span {
         font-size: 1.2rem;
     }
-    .right {
+    .label_2 {
         display: none;
     }
     .btn_wrapper {

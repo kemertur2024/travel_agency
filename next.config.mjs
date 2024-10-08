@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env: {
-        API_URL: process.env.API_URL || "http://localhost:3000",
+        API_URL: process.env.API_URL || "https://kemer-tur.net",
         FIRM_NAME: process.env.FIRM_NAME || "Кемер-Tур",
         I18NEXUS_API_KEY:
             process.env.I18NEXUS_API_KEY || "O6ZoOWWIqe-KXlcXt6yQyg",

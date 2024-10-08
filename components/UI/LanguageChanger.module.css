@@ -1,0 +1,41 @@
+.radio_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 200px; /* Adjust according to your design */
+    margin: 0 auto;
+    gap: 0.5rem;
+}
+
+.radio_label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-2);
+    border-radius: 100px;
+    position: relative;
+}
+
+.radio_label img {
+    width: 22px;
+    height: 22px;
+    border-radius: 100px;
+}
+
+.radio_input {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.radio_input:checked + img {
+    border: 2px solid var(--primary-5); /* To highlight the selected language */
+    border-radius: 100px;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

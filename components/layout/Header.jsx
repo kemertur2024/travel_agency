@@ -9,7 +9,6 @@ import Burger from "../UI/Burger";
 import { useState } from "react";
 import Link from "next/link";
 import MyButton from "../UI/MyCustomButton";
-import LanguageChangerMob from "../UI/LanguageChangerMob";
 
 export default function Header() {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -33,6 +32,7 @@ export default function Header() {
                         </div>
                     </div>
                     <div className={cl.right}>
+                        <LanguageChanger />
                         <div className={cl.label_2}>
                             <MyButton
                                 onClick={(e) => {
@@ -41,13 +41,15 @@ export default function Header() {
                                 }}
                             >
                                 Заказать
-                            </MyButton>
+                            </MyButton>{" "}
                         </div>
-                        <LanguageChanger />
-                    </div>
-                    <div className={cl.btn_wrapper}>
-                        <LanguageChangerMob />
-                        <Burger toggleNav={toggleNav} isNavOpen={isNavOpen} />
+                        <div className={cl.btn_wrapper}>
+                            {/* <LanguageChangerMob /> */}
+                            <Burger
+                                toggleNav={toggleNav}
+                                isNavOpen={isNavOpen}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
