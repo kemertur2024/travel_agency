@@ -9,11 +9,13 @@ import Burger from "../UI/Burger";
 import { useState } from "react";
 import Link from "next/link";
 import MyButton from "../UI/MyCustomButton";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const toggleNav = () => setIsNavOpen(!isNavOpen);
     const closeNav = () => setIsNavOpen(false);
+    const router = useRouter();
 
     const { t } = useTranslation();
     return (
@@ -40,7 +42,7 @@ export default function Header() {
                                     router.push(`${process.env.WHATSAPP_LINK}`);
                                 }}
                             >
-                                Заказать
+                                {t("header:btn")}
                             </MyButton>{" "}
                         </div>
                         <div className={cl.btn_wrapper}>
