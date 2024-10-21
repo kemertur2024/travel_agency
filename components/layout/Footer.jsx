@@ -41,7 +41,18 @@ export default function Footer() {
                             <span className={cl.yellow_title}>
                                 {t("howtoorder:contact_excutsion")}{" "}
                             </span>
-                            <a href='tel:+905350449927' target='_blank'>
+                            <a
+                                href='tel:+905350449927'
+                                onClick={() =>
+                                    gtag("event", "conversion", {
+                                        send_to:
+                                            "AW-16741464150/mCZBCMXq5N8ZENbw-a4-",
+                                        event_category: "Phone",
+                                        event_label: "+90 535 044 99 27",
+                                        value: 1,
+                                    })
+                                }
+                            >
                                 +90 535 044 99 27
                             </a>
                         </div>
@@ -49,7 +60,18 @@ export default function Footer() {
                             <span className={cl.yellow_title}>
                                 {t("howtoorder:contact_partners")}
                             </span>
-                            <a href='tel:+905350449927' target='_blank'>
+                            <a
+                                href='tel:+905350449927'
+                                onClick={() =>
+                                    gtag("event", "conversion", {
+                                        send_to:
+                                            "AW-16741464150/mCZBCMXq5N8ZENbw-a4-",
+                                        event_category: "Phone",
+                                        event_label: "+90 535 044 99 27",
+                                        value: 1,
+                                    })
+                                }
+                            >
                                 {" "}
                                 +90 535 044 99 27
                             </a>
@@ -59,7 +81,18 @@ export default function Footer() {
                                 {" "}
                                 UÇAK BİLETİ NO:
                             </span>
-                            <a href='tel:+905350449927' target='_blank'>
+                            <a
+                                href='tel:+905350449927'
+                                onClick={() =>
+                                    gtag("event", "conversion", {
+                                        send_to:
+                                            "AW-16741464150/mCZBCMXq5N8ZENbw-a4-",
+                                        event_category: "Phone",
+                                        event_label: "+90 535 044 99 27",
+                                        value: 1,
+                                    })
+                                }
+                            >
                                 {" "}
                                 +90 535 044 99 27
                             </a>
