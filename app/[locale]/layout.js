@@ -75,6 +75,7 @@ export default async function RootLayout({ children, params }) {
                             />
                         </div>
                     </noscript>
+                    {/* /Yandex.Metrika counter */}
                     <script
                         async
                         src='https://www.googletagmanager.com/gtag/js?id=AW-16741464150'
@@ -89,7 +90,13 @@ export default async function RootLayout({ children, params }) {
                         `,
                         }}
                     />
-                    {/* /Yandex.Metrika counter */}
+                    <script
+                        dangerouslySetInnerHTML={{
+                            __html: `
+                              gtag('config', 'AW-16741464150/mCZBCMXq5N8ZENbw-a4-', {'phone_conversion_number': '+90 535 044 99 27'});
+                        `,
+                        }}
+                    />
                 </head>
                 <body>
                     <Header />
