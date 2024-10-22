@@ -27,6 +27,7 @@ export default function Nav({ isOpen, closeMenu }) {
             <nav className={` ${cl.mnavigation} ${isOpen ? cl.open : ""}`}>
                 <div className={cl.mobnav_toprow}>
                     <MyButton
+                        id='whatsapp'
                         onClick={(e) => {
                             e.preventDefault();
                             router.push(`${process.env.WHATSAPP_LINK}`);

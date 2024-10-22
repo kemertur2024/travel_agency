@@ -37,6 +37,7 @@ export default function Header() {
                         <LanguageChanger />
                         <div className={cl.label_2}>
                             <MyButton
+                                id='whatsapp'
                                 onClick={(e) => {
                                     e.preventDefault();
                                     router.push(`${process.env.WHATSAPP_LINK}`);
