@@ -1,0 +1,112 @@
+.imageUploader {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.fileInput {
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.fileInput:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.15);
+    outline: none;
+}
+
+.previewList,
+.imagesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.imageItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 6px;
+    background: #fafafa;
+    box-sizing: border-box;
+}
+
+.imageItem img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.altInput {
+    padding: 6px 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.altInput:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.15);
+    outline: none;
+}
+
+/* Кнопка удаления фотки внутри imageItem */
+.removeButton {
+    top: 4px;
+    right: 4px;
+    border: none;
+    background: #d33;
+    color: #fff;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.removeButton:hover {
+    background: #a00;
+}
+
+/* Кнопка загрузки */
+.uploadButton {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0077ff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.uploadButton:hover {
+    background-color: #005ecb;
+}
+
+.uploadButton:disabled {
+    background-color: #a0cfff;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .imageItem {
+        width: 48%;
+    }
+}

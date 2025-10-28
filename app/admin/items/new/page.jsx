@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import ItemForm from "@/components/admin/ItemForm";
+import style from "@/app/admin/AdminForm.module.css";
 
 export default function NewItemPage() {
     const router = useRouter();
@@ -20,8 +21,17 @@ export default function NewItemPage() {
     };
 
     return (
-        <div style={{ padding: "2rem" }}>
-            <h1>Создать новую услугу</h1>
+        <div className={style.adminPage}>
+            <div className={style.adminHeader}>
+                <h1 className={style.pageTitle}>Создать новую услугу</h1>
+                <button
+                    className={style.closeButton}
+                    onClick={() => router.push("/admin/items")}
+                >
+                    ✕
+                </button>
+            </div>
+
             <ItemForm onSubmit={handleSubmit} />
         </div>
     );

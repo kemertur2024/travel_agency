@@ -9,7 +9,9 @@ cloudinary.config({
 
 export async function POST(request) {
     try {
-        const { file } = await request.json(); // base64 или URL
+        const formData = await request.formData();
+        const file = formData.get("file");
+
         if (!file) {
             return NextResponse.json(
                 { error: "Файл не передан" },
@@ -17,10 +19,13 @@ export async function POST(request) {
             );
         }
 
-        const uploadResponse = await cloudinary.uploader.upload(file, {
+        const buffer = Buffer.from(await file.arrayBuffer());
+        const base64 = `data:${file.type};base64,${buffer.toString("base64")}`;
+
+        // Загружаем в Cloudinary
+        const uploadResponse = await cloudinary.uploader.upload(base64, {
             folder: "travel_agency/items",
         });
-
         return NextResponse.json({
             url: uploadResponse.secure_url,
             public_id: uploadResponse.public_id,

@@ -1,0 +1,226 @@
+/* AdminForm.module.css */
+
+/* --- Общие стили админки --- */
+.adminPage {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: sans-serif;
+}
+
+.adminHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.pageTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.closeButton,
+.addButton {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.closeButton {
+    background-color: #d33;
+    color: #fff;
+}
+
+.closeButton:hover {
+    background-color: #a00;
+}
+
+.addButton {
+    background-color: #0070f3;
+    color: #fff;
+}
+
+.addButton:hover {
+    background-color: #005ecb;
+}
+
+/* --- Таблицы --- */
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto; /* горизонтальная прокрутка */
+}
+
+.itemsTable {
+    width: 100%;
+    min-width: 375px; /* минимальная ширина таблицы */
+    border-collapse: collapse;
+    font-size: 14px;
+    table-layout: auto;
+}
+
+.itemsTable th,
+.itemsTable td {
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.itemsTable th {
+    background: #f5f5f5;
+    cursor: pointer;
+    user-select: none;
+}
+
+.itemsTable th:hover {
+    background: #e0e0e0;
+}
+
+/* --- Кнопки действий в таблице --- */
+/* --- Кнопки действий в таблице --- */
+.actionButton {
+    padding: 4px 6px;
+    margin-right: 4px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    width: auto; /* адаптивная ширина */
+    min-width: 0; /* убираем фиксированный минимум */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.editButton {
+    background-color: #0070f3;
+    color: #fff;
+}
+
+.editButton:hover {
+    background-color: #005ecb;
+}
+
+.deleteButton {
+    background-color: #d33;
+    color: #fff;
+}
+
+.deleteButton:hover {
+    background-color: #a00;
+}
+
+/* --- Адаптивность для телефонов --- */
+@media (max-width: 768px) {
+    .actionButton {
+        padding: 2px 4px;
+        font-size: 11px;
+        margin-right: 2px;
+    }
+}
+
+.editButton {
+    background-color: #0070f3;
+    color: #fff;
+}
+
+.editButton:hover {
+    background-color: #005ecb;
+}
+
+.deleteButton {
+    background-color: #d33;
+    color: #fff;
+}
+
+.deleteButton:hover {
+    background-color: #a00;
+}
+
+/* --- Фильтры / табы --- */
+.filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.tabButton {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.tabButtonActive {
+    border: 2px solid #0070f3;
+    background: #eef6ff;
+}
+
+/* --- Адаптивность для телефонов --- */
+
+@media (max-width: 768px) {
+    .adminHeader {
+        flex-direction: row; /* оставляем горизонтальный ряд */
+        align-items: center;
+        flex-wrap: nowrap; /* не переносить элементы */
+        gap: 0.5rem;
+        overflow-x: auto; /* если не помещается, скролл по горизонтали */
+    }
+
+    .pageTitle {
+        font-size: 1.2rem; /* уменьшаем шрифт заголовка */
+        white-space: nowrap; /* не переносить заголовок */
+    }
+
+    .addButton,
+    .closeButton {
+        font-size: 12px;
+        padding: 4px 8px;
+        flex-shrink: 0; /* не сжимать меньше содержимого */
+    }
+
+    .itemsTable th,
+    .itemsTable td {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+
+    .filters {
+        gap: 0.25rem;
+    }
+
+    .tabButton {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+/* --- Минимальный экран 375px --- */
+@media (max-width: 375px) {
+    .tableWrapper {
+        overflow-x: auto;
+    }
+
+    .itemsTable {
+        min-width: 375px;
+    }
+}
+
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto; /* горизонтальная прокрутка только таблицы */
+}

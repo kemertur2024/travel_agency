@@ -1,0 +1,243 @@
+/* FormField.module.css */
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.input,
+.textarea,
+.select {
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.15);
+    outline: none;
+}
+
+.textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.checkboxGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.checkboxItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.error {
+    font-size: 13px;
+    color: #d33;
+}
+
+@media (max-width: 600px) {
+    .field {
+        margin-bottom: 12px;
+    }
+
+    .input,
+    .textarea,
+    .select {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
+
+.i18nGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 6px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    background: #fafafa;
+    box-sizing: border-box;
+}
+
+.i18nItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.i18nItem .input,
+.i18nItem .textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.imageUploader {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.fileInput {
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.fileInput:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.15);
+    outline: none;
+}
+
+.previewList,
+.imagesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.imageItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 6px;
+    background: #fafafa;
+    box-sizing: border-box;
+}
+
+.imageItem img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.altInput {
+    padding: 6px 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.altInput:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.15);
+    outline: none;
+}
+
+.removeButton {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    border: none;
+    background: #d33;
+    color: #fff;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.uploadButton {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0077ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.uploadButton:disabled {
+    background-color: #a0cfff;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .imageItem {
+        width: 48%;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.tabButton {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.tabButtonActive {
+    border: 2px solid #0070f3;
+    background: #eef6ff;
+}
+
+.submitButton {
+    padding: 10px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    background-color: #0070f3;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+    background-color: #005ecb;
+}
+
+.submitButton:disabled {
+    background-color: #a0cfff;
+    cursor: not-allowed;
+}
