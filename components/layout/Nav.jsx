@@ -61,13 +61,13 @@ export default function Nav() {
                         </ul>
                     </li>
                     <li>
-                        <Link href='/catalog/category/rent_yaht'>
-                            {t("nav:rent_yaht")}
+                        <Link href='/catalog/category/rent_yacht'>
+                            {t("nav:rent_yacht")}
                         </Link>
                     </li>
                     <li>
-                        <Link href='/catalog/category/rent_avto'>
-                            {t("nav:rent_avto")}
+                        <Link href='/catalog/category/rent_auto'>
+                            {t("nav:rent_auto")}
                         </Link>
                     </li>
                     <li>

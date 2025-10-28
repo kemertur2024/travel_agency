@@ -113,17 +113,17 @@ export default function Nav({ isOpen, closeMenu }) {
                     <li>
                         <Link
                             onClick={closeMenu}
-                            href='/catalog/category/rent_yaht'
+                            href='/catalog/category/rent_yacht'
                         >
-                            {t("nav:rent_yaht")}
+                            {t("nav:rent_yacht")}
                         </Link>
                     </li>
                     <li>
                         <Link
                             onClick={closeMenu}
-                            href='/catalog/category/rent_avto'
+                            href='/catalog/category/rent_auto'
                         >
-                            {t("nav:rent_avto")}
+                            {t("nav:rent_auto")}
                         </Link>
                     </li>
                     <li>

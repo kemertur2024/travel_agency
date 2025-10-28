@@ -1,0 +1,40 @@
+export const ITEM_FIELDS = [
+    {
+        name: "type",
+        label: "Тип",
+        type: "select",
+        options: ["excursion", "yacht", "car", "villa"],
+    },
+    { name: "slug", label: "Slug", type: "text" },
+    { name: "title", label: "Название", type: "i18n" },
+    { name: "description", label: "Описание", type: "i18n" },
+    { name: "price", label: "Цена", type: "number" },
+    { name: "oldprice", label: "Старая цена", type: "number" },
+    { name: "duration", label: "Длительность", type: "text" },
+    { name: "label", label: "Ярлык", type: "i18n" },
+    { name: "images", label: "Изображения", type: "array" },
+    {
+        name: "category",
+        label: "Категории",
+        type: "checkbox-group", // или multi-select
+        options: [
+            { value: "excursion", label: "Экскурсия" },
+            { value: "rent_yacht", label: "Яхты" },
+            { value: "rent_auto", label: "Авто" },
+            { value: "rent_villa", label: "Виллы" },
+            { value: "transfers", label: "Трансфер" },
+            { value: "from_kemer", label: "Из Кемера" },
+            { value: "from_alania", label: "Из Алании" },
+            { value: "from_side", label: "Из Сиде" },
+            { value: "rom_antalia", label: "Из Анталии" },
+            { value: "from_belek", label: "Из Белека" },
+            { value: "from_marmaris", label: "Из Мармариса" },
+            { value: "popular", label: "Популярные" },
+            { value: "shopping", label: "Шоппинг" },
+            { value: "individual", label: "Индивидуальные" },
+            { value: "vip", label: "Vip" },
+        ],
+    },
+
+    { name: "attributes", label: "Attributes", type: "json" },
+];

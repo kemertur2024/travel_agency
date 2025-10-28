@@ -4,8 +4,8 @@ import "./HomePage.css";
 import Services from "@/components/main/services/Services";
 import Advantages from "@/components/main/advantages/Advantages";
 import Popular from "@/components/main/popular/Popular";
-import RentYaht from "@/components/main/rentyaht/Rentyaht";
-import RentAvto from "@/components/main/rentavto/Rentavto";
+import RentYacht from "@/components/main/rentyacht/Rentyacht";
+import RentAuto from "@/components/main/rentauto/Rentauto";
 import Individual from "@/components/main/individual/Individual";
 
 const i18nNameSpaces = [
@@ -34,8 +34,8 @@ export default async function HomePage({ params: { locale } }) {
                 </div>
                 <Services />
                 <Popular />
-                <RentYaht />
-                <RentAvto />
+                <RentYacht />
+                <RentAuto />
                 <Individual />
                 <Advantages />
             </main>
