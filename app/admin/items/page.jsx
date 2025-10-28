@@ -3,12 +3,14 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import style from "@/app/admin/AdminForm.module.css";
+import { useRouter } from "next/navigation";
 
 export default function ItemsAdminPage() {
     const [items, setItems] = useState([]);
     const [filter, setFilter] = useState("all");
     const [sortField, setSortField] = useState(null);
     const [sortOrder, setSortOrder] = useState("asc"); // asc / desc
+    const router = useRouter();
 
     const fetchItems = async () => {
         const query = filter === "all" ? "" : `?type=${filter}`;
@@ -66,9 +68,17 @@ export default function ItemsAdminPage() {
         <div className={style.adminPage}>
             <div className={style.adminHeader}>
                 <h1 className={style.pageTitle}>Управление услугами</h1>
-                <Link href='/admin/items/new'>
-                    <button className={style.addButton}>Добавить новый</button>
-                </Link>
+
+                <button
+                    className={style.addButton}
+                    onClick={() => {
+                        if (window.confirm("Создать новый элемент?")) {
+                            router.push("/admin/items/new");
+                        }
+                    }}
+                >
+                    +
+                </button>
             </div>
 
             <div className={style.filters}>

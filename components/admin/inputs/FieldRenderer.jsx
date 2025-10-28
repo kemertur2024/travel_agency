@@ -36,7 +36,11 @@ export default function FieldRenderer({
 
         case "select":
             return (
-                <SelectField field={field} value={value} onChange={onChange} />
+                <SelectField
+                    field={field}
+                    onChange={onChange}
+                    value={Array.isArray(value) ? value[0] || "" : value ?? ""}
+                />
             );
 
         case "checkbox-group":
