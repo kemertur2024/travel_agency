@@ -1,7 +1,7 @@
 import { v2 as cloudinary } from "cloudinary";
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
-import Item from "@/models/Item"; // твоя модель
+import Item from "@/lib/schemas/item"; // твоя модель
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
