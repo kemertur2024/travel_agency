@@ -63,7 +63,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             <li>
                                 <Link
                                     onClick={closeMenu}
-                                    href='/catalog/category/from_antalia'
+                                    href='/catalog/from_antalia'
                                 >
                                     {t("nav:from_antalia")}
                                 </Link>
@@ -71,7 +71,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             <li>
                                 <Link
                                     onClick={closeMenu}
-                                    href='/catalog/category/from_alania'
+                                    href='/catalog/from_alania'
                                 >
                                     {t("nav:from_alania")}
                                 </Link>
@@ -79,7 +79,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             <li>
                                 <Link
                                     onClick={closeMenu}
-                                    href='/catalog/category/from_belek'
+                                    href='/catalog/from_belek'
                                 >
                                     {t("nav:from_belek")}
                                 </Link>
@@ -87,7 +87,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             <li>
                                 <Link
                                     onClick={closeMenu}
-                                    href='/catalog/category/from_kemer'
+                                    href='/catalog/from_kemer'
                                 >
                                     {t("nav:from_kemer")}
                                 </Link>
@@ -95,7 +95,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             <li>
                                 <Link
                                     onClick={closeMenu}
-                                    href='/catalog/category/from_marmaris'
+                                    href='/catalog/from_marmaris'
                                 >
                                     {t("nav:from_marmaris")}
                                 </Link>
@@ -103,7 +103,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             <li>
                                 <Link
                                     onClick={closeMenu}
-                                    href='/catalog/category/from_side'
+                                    href='/catalog/from_side'
                                 >
                                     {t("nav:from_side")}
                                 </Link>
@@ -111,18 +111,12 @@ export default function Nav({ isOpen, closeMenu }) {
                         </ul>
                     </li>
                     <li>
-                        <Link
-                            onClick={closeMenu}
-                            href='/catalog/category/rent_yacht'
-                        >
+                        <Link onClick={closeMenu} href='/catalog/rent_yacht'>
                             {t("nav:rent_yacht")}
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            onClick={closeMenu}
-                            href='/catalog/category/rent_auto'
-                        >
+                        <Link onClick={closeMenu} href='/catalog/rent_auto'>
                             {t("nav:rent_auto")}
                         </Link>
                     </li>
@@ -132,23 +126,17 @@ export default function Nav({ isOpen, closeMenu }) {
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/catalog/category/vip'>
+                        <Link onClick={closeMenu} href='/catalog/vip'>
                             {t("nav:vip")}
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            onClick={closeMenu}
-                            href='/catalog/category/shopping'
-                        >
+                        <Link onClick={closeMenu} href='/catalog/shopping'>
                             {t("nav:shopping")}
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            onClick={closeMenu}
-                            href='/catalog/category/rent_villa'
-                        >
+                        <Link onClick={closeMenu} href='/catalog/rent_villa'>
                             {t("nav:rent_villa")}
                         </Link>
                     </li>

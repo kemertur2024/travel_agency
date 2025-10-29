@@ -19,7 +19,7 @@ export default function Nav() {
                         <Link href='/about'>{t("nav:about")}</Link>
                     </li>
                     <li>
-                        <Link href='/catalog/category/from_kemer'>
+                        <Link href='/catalog/from_kemer'>
                             {t("nav:from_kemer")}
                             <FontAwesomeIcon
                                 icon={faChevronDown}
@@ -29,44 +29,44 @@ export default function Nav() {
 
                         <ul>
                             <li>
-                                <Link href='/catalog/category/from_antalia'>
+                                <Link href='/catalog/from_antalia'>
                                     {t("nav:from_antalia")}
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/catalog/category/from_alania'>
+                                <Link href='/catalog/from_alania'>
                                     {t("nav:from_alania")}
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/catalog/category/from_belek'>
+                                <Link href='/catalog/from_belek'>
                                     {t("nav:from_belek")}
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/catalog/category/from_marmaris'>
+                                <Link href='/catalog/from_marmaris'>
                                     {t("nav:from_marmaris")}
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/catalog/category/from_kemer'>
+                                <Link href='/catalog/from_kemer'>
                                     {t("nav:from_kemer")}
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/catalog/category/from_side'>
+                                <Link href='/catalog/from_side'>
                                     {t("nav:from_side")}
                                 </Link>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <Link href='/catalog/category/rent_yacht'>
+                        <Link href='/catalog/rent_yacht'>
                             {t("nav:rent_yacht")}
                         </Link>
                     </li>
                     <li>
-                        <Link href='/catalog/category/rent_auto'>
+                        <Link href='/catalog/rent_auto'>
                             {t("nav:rent_auto")}
                         </Link>
                     </li>
@@ -74,15 +74,15 @@ export default function Nav() {
                         <Link href='/transfers'>{t("nav:transfers")}</Link>
                     </li>
                     <li>
-                        <Link href='/catalog/category/vip'>{t("nav:vip")}</Link>
+                        <Link href='/catalog/vip'>{t("nav:vip")}</Link>
                     </li>
                     <li>
-                        <Link href='/catalog/category/shopping'>
+                        <Link href='/catalog/shopping'>
                             {t("nav:shopping")}
                         </Link>
                     </li>
                     <li>
-                        <Link href='/catalog/category/rent_villa'>
+                        <Link href='/catalog/rent_villa'>
                             {t("nav:rent_villa")}
                         </Link>
                     </li>

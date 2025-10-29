@@ -9,7 +9,7 @@ export const ITEM_FIELDS = [
         name: "type",
         label: "Тип",
         type: "select",
-        options: ["excursion", "yacht", "car", "villa"],
+        options: ["excursion", "yacht", "car", "villa", "transfer"],
         default: [],
         tab: "Основное",
     },

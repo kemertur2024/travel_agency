@@ -1,28 +1,20 @@
-"use client";
-
 import React from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-import { useTranslation } from "react-i18next";
 import cl from "./ProductDetails.module.css";
 import CarouselImg from "./UI/CarouselImg";
 import TitleExcursion from "./layout/TitleExscursion";
 import { dollar } from "@/lib/constants/constants";
 import Carousel from "./UI/Carousel";
-import { filterByTags } from "@/helpers/helpers";
 
-export default function ProductDetails({ item }) {
-    const { t } = useTranslation();
-    const tags = [...item.category];
-    const data = filterByTags(tags);
-
+export default function ProductDetails({ item, category, locale }) {
     return (
         <>
             <div className={cl.grid}>
                 <main className={cl.container}>
                     <CarouselImg images={item.images} />
-                    <TitleExcursion text={item.nameKey} />
+                    <TitleExcursion text={item.title[locale]} />
                     <div className={cl.price_wrapper}>
                         <span className={cl.price}>
                             {item.price}
@@ -42,14 +34,14 @@ export default function ProductDetails({ item }) {
                             remarkPlugins={[remarkGfm]}
                             rehypePlugins={[rehypeRaw]}
                         >
-                            {t(`excursions:${item.descriptionKey}`)}
+                            {item.description[locale]}
                         </Markdown>
                     </div>
                     <div className={cl.tooLike}>
                         Вам также может понравиться
                     </div>
                     <div>
-                        <Carousel data={data} />
+                        <Carousel category={category} locale={locale} />
                     </div>
                 </main>
             </div>

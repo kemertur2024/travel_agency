@@ -62,6 +62,7 @@ export default function ItemsAdminPage() {
         { label: "Экскурсии", value: "excursion" },
         { label: "Яхты", value: "yacht" },
         { label: "Авто", value: "car" },
+        { label: "Виллы", value: "villa" },
     ];
 
     return (

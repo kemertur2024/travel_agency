@@ -8,6 +8,8 @@ import RentYacht from "@/components/main/rentyacht/Rentyacht";
 import RentAuto from "@/components/main/rentauto/Rentauto";
 import Individual from "@/components/main/individual/Individual";
 
+import { getAllItems } from "@/lib/api/items";
+
 const i18nNameSpaces = [
     "HomePage",
     "Services",
@@ -20,6 +22,8 @@ const i18nNameSpaces = [
 ];
 
 export default async function HomePage({ params: { locale } }) {
+    const allItems = await getAllItems();
+
     const { t, resources } = await initTranslations(locale, i18nNameSpaces);
 
     return (
@@ -33,10 +37,10 @@ export default async function HomePage({ params: { locale } }) {
                     <h1 className='hiddenTitle'>{`Туристическое агенство ${process.env.FIRM_NAME}`}</h1>
                 </div>
                 <Services />
-                <Popular />
-                <RentYacht />
-                <RentAuto />
-                <Individual />
+                <Popular category='popular' />
+                <RentYacht category='rent_yacht' />
+                <RentAuto category='rent_auto' />
+                <Individual category='individual' />
                 <Advantages />
             </main>
         </TranslationsProvider>

@@ -5,9 +5,15 @@ export default function CarouselImg({ images }) {
         <div className={cl.main_container}>
             <div className={cl.window}>
                 <div className={cl.all_pages_container}>
-                    {images.map((child) => (
-                        <div className={cl.item_wrapper} key={child}>
-                            <img src={child} />
+                    {images.map((child, index) => (
+                        <div
+                            className={cl.item_wrapper}
+                            key={child.id || index}
+                        >
+                            <img
+                                src={child.url}
+                                alt={child.alt || `carousel-${index}`}
+                            />
                         </div>
                     ))}
                 </div>
