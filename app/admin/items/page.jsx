@@ -80,6 +80,12 @@ export default function ItemsAdminPage() {
                 >
                     +
                 </button>
+                <button
+                    className={style.closeButton}
+                    onClick={() => router.push("/admin")}
+                >
+                    ✕
+                </button>
             </div>
 
             <div className={style.filters}>
