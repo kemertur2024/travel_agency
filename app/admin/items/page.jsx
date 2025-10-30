@@ -71,16 +71,6 @@ export default function ItemsAdminPage() {
                 <h1 className={style.pageTitle}>Управление услугами</h1>
 
                 <button
-                    className={style.addButton}
-                    onClick={() => {
-                        if (window.confirm("Создать новый элемент?")) {
-                            router.push("/admin/items/new");
-                        }
-                    }}
-                >
-                    +
-                </button>
-                <button
                     className={style.closeButton}
                     onClick={() => router.push("/admin")}
                 >
@@ -100,6 +90,16 @@ export default function ItemsAdminPage() {
                         {f.label}
                     </button>
                 ))}
+                <button
+                    className={style.addButton}
+                    onClick={() => {
+                        if (window.confirm("Создать новый элемент?")) {
+                            router.push("/admin/items/new");
+                        }
+                    }}
+                >
+                    +
+                </button>
             </div>
 
             {/* Обёртка для горизонтального скролла только таблицы */}
