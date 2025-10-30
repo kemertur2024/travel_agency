@@ -164,6 +164,22 @@ export default function Footer() {
                                 </Link>
                             </li>
                         </ul>
+                        <ul>
+                            <span className={cl.yellow_title}>
+                                {t("howtoorder:title_partners")}
+                            </span>
+
+                            <li>
+                                <Link href='https://marketingstark.app/'>
+                                    {t("nav:marketing")}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href='https://kemer.app/'>
+                                    {t("nav:kemerapp")}
+                                </Link>
+                            </li>
+                        </ul>
                     </nav>
                 </div>
             </div>

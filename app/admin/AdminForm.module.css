@@ -1,6 +1,113 @@
+/* --- Общие стили админки --- */
 /* AdminForm.module.css */
 
-/* --- Общие стили админки --- */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #dbeafe, #f0f9ff);
+    font-family: system-ui, -apple-system, sans-serif;
+    padding: 1rem;
+}
+
+.form {
+    background: white;
+    padding: 2.5rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: #475569;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+/* 🔹 Кнопка выхода красная */
+.logoutButton {
+    background-color: #d33;
+}
+
+.logoutButton:hover {
+    background-color: #a00;
+}
+
+/* 🔹 Адаптив */
+@media (max-width: 480px) {
+    .form {
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        max-width: 100%;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 0.95rem;
+        padding: 0.65rem;
+    }
+}
+
+/* 🔹 Анимация */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .adminPage {
     padding: 0.5rem;
     display: flex;
