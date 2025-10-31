@@ -9,8 +9,13 @@ import Social from "../UI/Soсial";
 import { useState } from "react";
 import MyButton from "../UI/MyCustomButton";
 import { useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 
 export default function Nav({ isOpen, closeMenu }) {
+    const params = useParams();
+
+    const lang = params?.lang || params?.locale || "ru";
+
     const router = useRouter();
     const { t } = useTranslation();
     const [openSubmenu, setOpenSubmenu] = useState(null);
@@ -38,12 +43,12 @@ export default function Nav({ isOpen, closeMenu }) {
                 </div>
                 <ul>
                     <li>
-                        <Link onClick={closeMenu} href='/'>
-                            {t("nav:main")}{" "}
+                        <Link onClick={closeMenu} href={`/${lang}`}>
+                            {t("nav:main")}
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/about'>
+                        <Link onClick={closeMenu} href={`/${lang}/about`}>
                             {t("nav:about")}
                         </Link>
                     </li>
@@ -63,7 +68,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             <li>
                                 <Link
                                     onClick={closeMenu}
-                                    href='/catalog/from_antalia'
+                                    href={`/${lang}/catalog/from_antalia`}
                                 >
                                     {t("nav:from_antalia")}
                                 </Link>
@@ -71,7 +76,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             <li>
                                 <Link
                                     onClick={closeMenu}
-                                    href='/catalog/from_alania'
+                                    href={`/${lang}/catalog/from_alania`}
                                 >
                                     {t("nav:from_alania")}
                                 </Link>
@@ -79,7 +84,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             <li>
                                 <Link
                                     onClick={closeMenu}
-                                    href='/catalog/from_belek'
+                                    href={`/${lang}/catalog/from_belek`}
                                 >
                                     {t("nav:from_belek")}
                                 </Link>
@@ -87,7 +92,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             <li>
                                 <Link
                                     onClick={closeMenu}
-                                    href='/catalog/from_kemer'
+                                    href={`/${lang}/catalog/from_kemer`}
                                 >
                                     {t("nav:from_kemer")}
                                 </Link>
@@ -95,7 +100,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             <li>
                                 <Link
                                     onClick={closeMenu}
-                                    href='/catalog/from_marmaris'
+                                    href={`/${lang}/catalog/from_marmaris`}
                                 >
                                     {t("nav:from_marmaris")}
                                 </Link>
@@ -103,7 +108,7 @@ export default function Nav({ isOpen, closeMenu }) {
                             <li>
                                 <Link
                                     onClick={closeMenu}
-                                    href='/catalog/from_side'
+                                    href={`/${lang}/catalog/from_side`}
                                 >
                                     {t("nav:from_side")}
                                 </Link>
@@ -111,65 +116,77 @@ export default function Nav({ isOpen, closeMenu }) {
                         </ul>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/catalog/rent_yacht'>
+                        <Link
+                            onClick={closeMenu}
+                            href={`/${lang}/catalog/rent_yacht`}
+                        >
                             {t("nav:rent_yacht")}
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/catalog/rent_auto'>
+                        <Link
+                            onClick={closeMenu}
+                            href={`/${lang}/catalog/rent_auto`}
+                        >
                             {t("nav:rent_auto")}
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/transfers'>
+                        <Link onClick={closeMenu} href={`/${lang}/transfers`}>
                             {t("nav:transfers")}
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/catalog/vip'>
+                        <Link onClick={closeMenu} href={`/${lang}/catalog/vip`}>
                             {t("nav:vip")}
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/catalog/shopping'>
+                        <Link
+                            onClick={closeMenu}
+                            href={`/${lang}/catalog/shopping`}
+                        >
                             {t("nav:shopping")}
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/catalog/rent_villa'>
+                        <Link
+                            onClick={closeMenu}
+                            href={`/${lang}/catalog/rent_villa`}
+                        >
                             {t("nav:rent_villa")}
                         </Link>
                     </li>
 
                     <li>
-                        <Link onClick={closeMenu} href='/reviews'>
+                        <Link onClick={closeMenu} href={`/${lang}/reviews`}>
                             {t("nav:reviews")}
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/contacts'>
+                        <Link onClick={closeMenu} href={`/${lang}/contacts`}>
                             {t("nav:contacts")}
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/faq'>
+                        <Link onClick={closeMenu} href={`/${lang}/faq`}>
                             {t("nav:faq")}
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/politic'>
+                        <Link onClick={closeMenu} href={`/${lang}/politic`}>
                             {t("nav:politic")}
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} href='/blog'>
+                        <Link onClick={closeMenu} href={`/${lang}/blog`}>
                             {t("nav:blog")}
                         </Link>
                     </li>
                 </ul>
                 <div className={cl.socials_wrapper}>
                     <Social />
-                </div>{" "}
+                </div>
             </nav>
         </>
     );

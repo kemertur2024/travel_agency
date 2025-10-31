@@ -3,7 +3,7 @@ import "./Services.css";
 import ServiceItem from "./ServiceItem";
 import Title from "../../layout/Title";
 
-export default function Services() {
+export default function Services({ locale }) {
     const list = ServicesList;
 
     return (
@@ -12,7 +12,11 @@ export default function Services() {
             <section>
                 <div className='services_wrapper'>
                     {list.map((item) => (
-                        <ServiceItem item={item} key={item.id} />
+                        <ServiceItem
+                            item={item}
+                            key={item.id}
+                            locale={locale}
+                        />
                     ))}
                 </div>
             </section>

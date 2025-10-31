@@ -5,11 +5,13 @@ import "./ServiceItem.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ServiceItem({ item }) {
+export default function ServiceItem({ item, locale }) {
+    const lang = locale;
+
     const { t } = useTranslation();
 
     return (
-        <Link href={item.link}>
+        <Link href={`/${lang}${item.link}`}>
             <figure className='item_wrapper'>
                 <div className='item_imgWrapper'>
                     <Image

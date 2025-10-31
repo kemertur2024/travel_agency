@@ -103,7 +103,7 @@ export default async function RootLayout({ children, params }) {
                     {/* End Google Tag Manager (noscript) */}
                     <Header />
                     <main>{children}</main>
-                    <Footer />
+                    <Footer locale={locale} />
                 </body>
             </html>
         </TranslationsProvider>

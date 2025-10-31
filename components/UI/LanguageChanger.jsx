@@ -1,7 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import { i18nConfig } from "@/i18nConfig";
 import { useState } from "react";
@@ -22,18 +21,21 @@ export default function LanguageChanger() {
         const expires = date.toUTCString();
         document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
 
-        // redirect to the new locale path
-        if (
-            currentLocale === i18nConfig.defaultLocale &&
-            !i18nConfig.prefixDefault
-        ) {
-            router.push("/" + newLocale + currentPathname);
+        // 🧩 разбиваем путь на сегменты
+        const segments = currentPathname.split("/").filter(Boolean);
+
+        // 🧩 если первый сегмент — текущая локаль, заменяем его
+        if (segments[0] === currentLocale) {
+            segments[0] = newLocale;
         } else {
-            router.push(
-                currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
-            );
+            // если нет — добавляем новую локаль в начало
+            segments.unshift(newLocale);
         }
 
+        // 🧩 собираем новый путь
+        const newPath = "/" + segments.join("/");
+
+        router.push(newPath);
         router.refresh();
     };
 

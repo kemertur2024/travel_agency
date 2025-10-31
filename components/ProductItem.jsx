@@ -10,7 +10,7 @@ export default function ProductItem({ child, category, locale }) {
         <>
             <Link
                 key={child.id}
-                href={`/catalog/${category}/${child.slug}`}
+                href={`/${locale}/catalog/${category}/${child.slug}`}
                 className={cl.item}
                 rel='noopener noreferrer'
                 // target='_blank'
