@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
-import WhatsApp from "@/components/UI/whatsapp";
+import WhatsApp from "@/components/UI/WhatsApp";
 
 const i18nNameSpaces = [
     "HomePage",
