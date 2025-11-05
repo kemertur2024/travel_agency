@@ -8,16 +8,16 @@ import TGMessage from "@/helpers/TGMessage";
 import { useRouter } from "next/navigation";
 
 export default function Form({ onSuccess }) {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+
     const formRef = useRef(null);
     const router = useRouter();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const formData = new FormData(formRef.current);
 
-        // Извлечение данных из FormData
         const data = {
             phone: formData.get("phone"),
             name: formData.get("name"),
@@ -31,9 +31,19 @@ export default function Form({ onSuccess }) {
             message: formData.get("message"),
         };
 
-        TGMessage(data);
-        onSuccess(); // Закрыть модальное окно после успешной отправки
-        router.push("./thanks");
+        try {
+            await TGMessage(data);
+            onSuccess(); // закрыть модальное окно
+            alert(
+                i18n.language === "ru"
+                    ? "Форма успешно отправлена! Спасибо за обращение."
+                    : "Form submitted successfully! Thank you for your request."
+            );
+            router.push(`/${i18n.language}/thanks`); // локализованная страница
+        } catch (err) {
+            console.error("Ошибка отправки формы:", err);
+            alert("Ошибка при отправке, попробуйте позже");
+        }
     };
 
     return (

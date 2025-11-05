@@ -1,0 +1,39 @@
+.whatsapp {
+    position: fixed;
+    top: 300px;
+    right: 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary-2);
+    z-index: 4;
+    color: #ffffff;
+    writing-mode: vertical-rl;
+    padding: 0.5rem 0.2rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    transform: rotateZ(180deg);
+    cursor: pointer;
+}
+.icons {
+    font-size: 14px;
+}
+
+.lamp {
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    animation: blink 0.4s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        background-color: darkred;
+        transform: scale(1);
+    }
+    100% {
+        background-color: red;
+        transform: scale(1.3);
+    }
+}

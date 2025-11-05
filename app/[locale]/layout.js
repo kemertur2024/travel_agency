@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationsProvider";
+import WhatsApp from "@/components/UI/whatsapp";
 
 const i18nNameSpaces = [
     "HomePage",
@@ -102,6 +103,7 @@ export default async function RootLayout({ children, params }) {
                     </noscript>
                     {/* End Google Tag Manager (noscript) */}
                     <Header />
+                    <WhatsApp />
                     <main>{children}</main>
                     <Footer locale={locale} />
                 </body>

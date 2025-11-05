@@ -7,6 +7,7 @@ import CarouselImg from "./UI/CarouselImg";
 import TitleExcursion from "./layout/TitleExscursion";
 import { dollar } from "@/lib/constants/constants";
 import Carousel from "./UI/Carousel";
+import OrderButton from "./UI/OrderButton";
 
 export default function ProductDetails({ item, category, locale }) {
     return (
@@ -28,6 +29,9 @@ export default function ProductDetails({ item, category, locale }) {
                         ) : (
                             ""
                         )}
+                    </div>{" "}
+                    <div className={cl.order_button}>
+                        <OrderButton locale={locale} />
                     </div>
                     <div className={cl.description}>
                         <Markdown

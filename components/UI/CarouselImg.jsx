@@ -1,8 +1,6 @@
 import cl from "./CarouselImg.module.css";
 
 export default function CarouselImg({ images }) {
-    console.log("img", images);
-
     return (
         <div className={cl.main_container}>
             <div className={cl.window}>
