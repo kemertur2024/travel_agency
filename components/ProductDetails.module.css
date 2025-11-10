@@ -72,7 +72,7 @@
 .order_button {
     display: flex;
     position: sticky;
-    top: 82px;
+    top: 107px;
     justify-content: center;
     padding: 0.5rem 0;
     background: linear-gradient(
@@ -84,6 +84,11 @@
     z-index: 2;
 }
 
+@media (max-width: 989px) {
+    .order_button {
+        top: 82px;
+    }
+}
 @media (max-width: 536px) {
     .order_button {
         top: 70px;
